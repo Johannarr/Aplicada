@@ -295,11 +295,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1112400599}
   - component: {fileID: 1112400598}
-  - component: {fileID: 1112400600}
-  - component: {fileID: 1112400601}
   - component: {fileID: 1112400604}
   - component: {fileID: 1112400603}
   - component: {fileID: 1112400602}
+  - component: {fileID: 1112400600}
   m_Layer: 0
   m_Name: trash
   m_TagString: Untagged
@@ -381,18 +380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4383929f70257d44a6178fe22c134c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1112400601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112400597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4383929f70257d44a6178fe22c134c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1112400602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -442,6 +429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1240160303}
   - component: {fileID: 1240160302}
+  - component: {fileID: 1240160304}
   m_Layer: 0
   m_Name: DeadZone
   m_TagString: Untagged
@@ -476,6 +464,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1240160304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240160301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf79b5dbae0ecc94ea700ede6abd4741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 0}
 --- !u!1 &1353712237
 GameObject:
   m_ObjectHideFlags: 0
