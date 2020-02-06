@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour
         return CurrentScore;
     }
 
-    public int DicrementLives()
+    public int DecrementLives()
     {
        CurrentLives = CurrentLives > 0 ? CurrentLives - 1 : 0;
         LivesText.text = $"Vidas: {CurrentLives}"; 

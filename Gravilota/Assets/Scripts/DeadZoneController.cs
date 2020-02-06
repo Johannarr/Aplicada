@@ -16,7 +16,7 @@ public class DeadZoneController : MonoBehaviour
     void OnTrigggerEnter(Collider other)
     {
         Destroy (other.gameObject);
-        gameController.DecrementLife();
+        gameController.DecrementLives();
     }
 }
 
