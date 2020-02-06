@@ -17,7 +17,6 @@ public class GameController : MonoBehaviour
     {
         CurrentScore = 0;
         CurrentLives = 3;
-        ScoreText = GetComponent<TextMesh>();
         LivesText = GameObject.Find("LivesText").GetComponent<TextMesh>();
         GameOverText = GameObject.Find("GameOverText");
         
@@ -40,8 +39,12 @@ public class GameController : MonoBehaviour
 
     public int IncrementScore()
     {
-       CurrentScore++;
-       ScoreText.text = CurrentScore.ToString(); 
+      // CurrentScore++;
+      // ScoreText.text = CurrentScore.ToString(); 
+       
+
+       CurrentScore = CurrentScore + 1;
+       ScoreText.text = CurrentScore.ToString();
         return CurrentScore;
     }
 

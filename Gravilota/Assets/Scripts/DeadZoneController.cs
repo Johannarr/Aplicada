@@ -13,7 +13,7 @@ public class DeadZoneController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnTrigggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         Destroy (other.gameObject);
         gameController.DecrementLives();

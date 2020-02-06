@@ -211,7 +211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!102 &812646533
 TextMesh:
   serializedVersion: 3
@@ -279,7 +279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812646532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.049999952, y: -3.81, z: 0}
+  m_LocalPosition: {x: -0.31, y: -0.1, z: 0}
   m_LocalScale: {x: 0.03, y: 0.03, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -510,10 +510,10 @@ MonoBehaviour:
   CurrentScore: 0
   CurrentLives: 0
   ScoreText: {fileID: 2049555556}
+  GameOverText: {fileID: 812646532}
   LivesText: {fileID: 1576781437}
   BallPrefab: {fileID: 7922114551192676555, guid: b6d21fdf16e44e64eb99ab0f810ac193,
     type: 3}
-  GameOverText: {fileID: 812646532}
 --- !u!102 &1353712239
 TextMesh:
   serializedVersion: 3
