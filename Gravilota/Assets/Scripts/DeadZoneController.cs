@@ -9,12 +9,16 @@ public class DeadZoneController : MonoBehaviour
     public GameController gameController;
     void Start()
     {
-        gameController = GameObject.Find("").GetComponent<GameController>();
+        gameController = GameObject.Find("GlobalScriptsText").GetComponent<GameController>();
     }
 
     // Update is called once per frame
     void OnTrigggerEnter(Collider other)
     {
         Destroy (other.gameObject);
+        gameController.DecrementLife();
     }
 }
+
+
+   
