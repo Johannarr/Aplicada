@@ -18,10 +18,10 @@ public class GameController : MonoBehaviour
         CurrentScore = 0;
         CurrentLives = 3;
         ScoreText = GetComponent<TextMesh>();
-        LivesText = GameObject.Find("Lifes").GetComponent<TextMesh>();
+        LivesText = GameObject.Find("LivesText").GetComponent<TextMesh>();
         GameOverText = GameObject.Find("GameOverText");
 
-        InvokeRepeating("IntantiateBall", 0, 1.5f);
+        InvokeRepeating("InstantiateBall", 0, 1.5f);
         GameOverText.SetActive(false);
         
     }
