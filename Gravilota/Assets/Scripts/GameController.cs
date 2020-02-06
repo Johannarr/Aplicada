@@ -8,9 +8,9 @@ public class GameController : MonoBehaviour
     public int CurrentScore;
     public int CurrentLives;
     public TextMesh ScoreText;
+    public GameObject GameOverText;
     public TextMesh LivesText;
     public GameObject BallPrefab;
-     public GameObject GameOverText;
     const float MINX = -7.8f, MAXX = 7.8f;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class GameController : MonoBehaviour
         ScoreText = GetComponent<TextMesh>();
         LivesText = GameObject.Find("LivesText").GetComponent<TextMesh>();
         GameOverText = GameObject.Find("GameOverText");
-
+        
         InvokeRepeating("InstantiateBall", 0, 1.5f);
         GameOverText.SetActive(false);
         
