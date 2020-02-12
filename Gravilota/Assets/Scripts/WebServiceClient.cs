@@ -10,9 +10,9 @@ public class WebServiceClient : MonoBehaviour
     [Serializable]
     public class GravilotaScore
     {
-        int Id;
-        string PlayerName;
-        double Score;
+        public int Id;
+        public string PlayerName;
+        public double Score;
     }
     UnityWebRequest www;
     const string webServiceURL = "https://localhost:44343/api/values";
@@ -27,6 +27,7 @@ public class WebServiceClient : MonoBehaviour
     {
        
        GravilotaScore newScore = new GravilotaScore();
+       newScore.Id = 0;
        newScore.PlayerName = "Joha";
        newScore.Score = score;
 
