@@ -39,13 +39,11 @@ public class GameController : MonoBehaviour
 
     public int IncrementScore()
     {
-      // CurrentScore++;
-      // ScoreText.text = CurrentScore.ToString(); 
-       
+      
 
        CurrentScore = CurrentScore + 1;
        ScoreText.text = CurrentScore.ToString();
-        return CurrentScore;
+       return CurrentScore;
     }
 
     public int DecrementLives()
