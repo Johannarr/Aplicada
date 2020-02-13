@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class PlayerKeyController : MonoBehaviour
 {
+
+    public AudioSource audioSource;
     
     GameController gameController;
 
     BoxCollider boxCollider;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         gameController = GameObject.Find("GlobalScriptsText").GetComponent<GameController>();
     }
 
@@ -17,21 +21,19 @@ public class PlayerKeyController : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKey("right"));
-        {
-            //boxCollider = gameObject.GetComponent<BoxCollider>();
-
-            //boxCollider
-        }
 
     }
-
 
     private void OnTriggerEnter (Collider other)
     {
 
-        gameController.IncrementScore();
-        Destroy(other.gameObject);
+        if (Input.GetKey("a") && Input.GetKey("d") == false && Input.GetKey("s") == false && Input.GetKey("f") == false)
+        {
 
+            audioSource.Play();
+            gameController.IncrementScore();
+            Destroy(other.gameObject);
+        }
+       
     }
 }
