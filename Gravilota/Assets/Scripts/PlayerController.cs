@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     {
         gameController.IncrementScore();
         Destroy (other.gameObject);
+        AudioManager.Instance.PlaySoundEffect(AudioManager.SoundEffect.Capture);
 
     }
 }
