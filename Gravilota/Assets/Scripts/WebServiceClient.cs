@@ -15,7 +15,7 @@ public class WebServiceClient : MonoBehaviour
         public double Score;
     }
     UnityWebRequest www;
-    const string webServiceURL = "https://localhost:44343/api/values";
+    const string webServiceURL = "https://localhost:44385/api/values";
     void Start()
     {
 

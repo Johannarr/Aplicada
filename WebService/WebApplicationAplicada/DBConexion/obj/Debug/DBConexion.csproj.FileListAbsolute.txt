@@ -1,0 +1,11 @@
+C:\Aplicada\WebService\WebApplicationAplicada\DBConexion\bin\Debug\DBConexion.dll.config
+C:\Aplicada\WebService\WebApplicationAplicada\DBConexion\bin\Debug\DBConexion.dll
+C:\Aplicada\WebService\WebApplicationAplicada\DBConexion\bin\Debug\DBConexion.pdb
+C:\Aplicada\WebService\WebApplicationAplicada\DBConexion\bin\Debug\EntityFramework.dll
+C:\Aplicada\WebService\WebApplicationAplicada\DBConexion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Aplicada\WebService\WebApplicationAplicada\DBConexion\bin\Debug\EntityFramework.xml
+C:\Aplicada\WebService\WebApplicationAplicada\DBConexion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Aplicada\WebService\WebApplicationAplicada\DBConexion\obj\Debug\DBConexion.csprojAssemblyReference.cache
+C:\Aplicada\WebService\WebApplicationAplicada\DBConexion\obj\Debug\DBConexion.csproj.CopyComplete
+C:\Aplicada\WebService\WebApplicationAplicada\DBConexion\obj\Debug\DBConexion.dll
+C:\Aplicada\WebService\WebApplicationAplicada\DBConexion\obj\Debug\DBConexion.pdb
