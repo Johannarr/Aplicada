@@ -1139,7 +1139,7 @@ MonoBehaviour:
   ScoreText: {fileID: 124264253}
   GameOverText: {fileID: 1115077142}
   LivesText: {fileID: 328298334}
-  KeyPrefab: {fileID: 7742457987169225883, guid: 7eb7dce5908322d4d8362eb599489cce,
+  KeyPrefab: {fileID: 8350768115144804690, guid: 7eb7dce5908322d4d8362eb599489cce,
     type: 3}
 --- !u!114 &1671063642
 MonoBehaviour:
