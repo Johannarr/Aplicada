@@ -6,19 +6,31 @@ public class AudioManager : MonoBehaviour
 {
     
     public static AudioManager Instance;
+
+    //Agrego los distintos audio source que se utilizaran
     public AudioSource KeyLost;
 
     public AudioSource KeyCapture;
 
+    public AudioSource Song;
+
+    public AudioSource GameOver;
+
+
+    // implementando singleton para poder utilizar el audiomanager en cualquier otra clase
     private void Awake()
     {
         Instance = this;
     }
     
+    // Este enum sirve para poder identificar los sonidos que se utilizaran en cada etapa y se utilizaran mediante el switch
+    //case de mas abajo
     public enum SoundEffect
     {
+        Start,
         Lost,
-        Capture
+        Capture,
+        GameOver
     }
 
     public void PlaySoundEffect(SoundEffect type)
@@ -34,6 +46,14 @@ public class AudioManager : MonoBehaviour
             KeyCapture.Play();
             break;
             
+        case SoundEffect.Start:
+            Song.Play();
+            break;
+
+        case SoundEffect.GameOver:
+            Song.Stop();
+            GameOver.Play();
+            break;
         }
     }
 }

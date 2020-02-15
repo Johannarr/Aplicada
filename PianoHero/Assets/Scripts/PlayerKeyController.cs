@@ -19,44 +19,22 @@ public class PlayerKeyController : MonoBehaviour
     void Update()
     {
 
-
-        // testing
-
-        KeyPosition = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
-
-
-       /* if (Input.GetTouch(0).position == KeyPosition)
-        {
-            gameController.IncrementScore();
-            Destroy(gameObject);  
-        }*/
-
-
-       /* if (Input.GetKeyDown("w"))
-        {
-            gameController.IncrementScore();
-            Destroy(gameObject);       
-        }*/
-
-        // si se hace un touch a la pantalla entrara al if y aumentara score y destruira el objeto
+        // Script para que pierda vida si no toco las teclas, presenta fallas
        /* if (Input.touchCount > 0)
         {
-            gameController.IncrementScore();
-            audioSource.Play();
-            Destroy(gameObject);       
+            gameController.DecrementLives();  
         }*/
+
+       
 
     }
 
 
-    // cuando el mouse o el touch toque el objeto se entrara a la funcion
+
+
+    // cuando el mouse o el touch toque el objeto se entrara a la funcion, es necesario que el objeto en cuestion tenga collider para que funcione
     void OnMouseDown()
     {
-
-       /* if (Input.mousePosition.x == gameObject.transform.position.x && Input.mousePosition.y == gameObject.transform.position.y)
-        {
-             
-        }*/
 
         gameController.IncrementScore();
         Destroy(gameObject); 
