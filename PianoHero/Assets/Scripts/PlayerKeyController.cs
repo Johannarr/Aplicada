@@ -12,7 +12,6 @@ public class PlayerKeyController : MonoBehaviour
     BoxCollider boxCollider;
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
 
         gameController = GameObject.Find("GlobalScriptsText").GetComponent<GameController>();
     }
@@ -21,17 +20,19 @@ public class PlayerKeyController : MonoBehaviour
     void Update()
     {
         // testing
-        if (Input.GetKeyDown("w"))
-        {
-            gameController.IncrementScore();
-            Destroy(gameObject);       
-        }
-        // si se hace un touch a la pantalla entrara al if y aumentara score y destruira el objeto
-        /*if (Input.touchCount > 0)
+       /* if (Input.GetKeyDown("w"))
         {
             gameController.IncrementScore();
             Destroy(gameObject);       
         }*/
+
+        // si se hace un touch a la pantalla entrara al if y aumentara score y destruira el objeto
+        if (Input.touchCount > 0)
+        {
+            gameController.IncrementScore();
+            audioSource.Play();
+            Destroy(gameObject);       
+        }
 
     }
 
