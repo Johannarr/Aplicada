@@ -20,20 +20,19 @@ public class PlayerKeyController : MonoBehaviour
     
     void Update()
     {
-
-
-    }
-
-    private void OnTriggerEnter (Collider other)
-    {
-
-        if (Input.GetKey("a") && Input.GetKey("d") == false && Input.GetKey("s") == false && Input.GetKey("f") == false)
+        // testing
+        if (Input.GetKeyDown("w"))
         {
-
-            audioSource.Play();
             gameController.IncrementScore();
-            Destroy(other.gameObject);
+            Destroy(gameObject);       
         }
-       
+        // si se hace un touch a la pantalla entrara al if y aumentara score y destruira el objeto
+        /*if (Input.touchCount > 0)
+        {
+            gameController.IncrementScore();
+            Destroy(gameObject);       
+        }*/
+
     }
+
 }

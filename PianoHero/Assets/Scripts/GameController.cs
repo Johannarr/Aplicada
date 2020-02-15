@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    const float MINX = -3.0f, MAXX = 3.0f;
+    const float MINX = -2.37f, MAXX = 2.37f;
     
     public int CurrentScore;
     public int CurrentLives;
@@ -41,7 +41,6 @@ public class GameController : MonoBehaviour
 
     public int IncrementScore()
     {
-      
 
        CurrentScore = CurrentScore + 1;
        ScoreText.text = CurrentScore.ToString();
