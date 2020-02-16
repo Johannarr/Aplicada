@@ -10,6 +10,11 @@ public class GameController : MonoBehaviour
     public int CurrentLives;
     public TextMesh ScoreText;
     public GameObject GameOverText;
+    public GameObject WinText;
+
+    public GameObject Crown1;
+    public GameObject Crown2;
+    public GameObject Crown3;
 
     public GameObject RetryText;
     public TextMesh LivesText;
@@ -27,12 +32,20 @@ public class GameController : MonoBehaviour
 
         LivesText = GameObject.Find("LivesText").GetComponent<TextMesh>();
         GameOverText = GameObject.Find("GameOverText");
-
+        WinText = GameObject.Find("WinText");
         RetryText = GameObject.Find("RetryText");
+
+        Crown1 = GameObject.Find("crown1");
+        Crown2 = GameObject.Find("crown2");
+        Crown3 = GameObject.Find("crown3");
         
         RetryText.SetActive(false);
-
         GameOverText.SetActive(false);
+        WinText.SetActive(false);
+
+        Crown1.SetActive(false);
+        Crown2.SetActive(false);
+        Crown3.SetActive(false);
 
         InvokeRepeating("InstantiateKey", 0, 1.5f);
        
@@ -45,7 +58,12 @@ public class GameController : MonoBehaviour
         {
 
             return;
-        }   
+        } 
+
+        else if (CurrentScore == 5)  
+        {
+            return;
+        }
 
         Instantiate(KeyPrefab, new Vector3 (Random.Range (MINX, MAXX),6,0), Quaternion.identity);
     }
@@ -55,6 +73,29 @@ public class GameController : MonoBehaviour
 
        CurrentScore = CurrentScore + 1;
        ScoreText.text = CurrentScore.ToString();
+
+       if (CurrentScore == 2)
+       {
+           Crown1.SetActive(true);
+       }
+       else if (CurrentScore == 4)
+       {
+           Crown2.SetActive(true);
+       }
+        else if (CurrentScore == 5)
+       {
+            Crown3.SetActive(true);
+            
+            StartCoroutine("SendScore");
+
+            WinText.SetActive(true);
+
+            RetryText.SetActive(true);
+
+            AudioManager.Instance.PlaySoundEffect(AudioManager.SoundEffect.GameOver);
+       }
+
+    
        return CurrentScore;
     }
 
@@ -73,6 +114,7 @@ public class GameController : MonoBehaviour
 
             AudioManager.Instance.PlaySoundEffect(AudioManager.SoundEffect.GameOver);
         }
+
 
         return CurrentLives;
     }
