@@ -16,6 +16,8 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource GameOver;
 
+    public AudioSource Win;
+
 
     // implementando singleton para poder utilizar el audiomanager en cualquier otra clase
     private void Awake()
@@ -30,7 +32,9 @@ public class AudioManager : MonoBehaviour
         Start,
         Lost,
         Capture,
-        GameOver
+        GameOver,
+
+        Win
     }
 
     public void PlaySoundEffect(SoundEffect type)
@@ -53,6 +57,11 @@ public class AudioManager : MonoBehaviour
         case SoundEffect.GameOver:
             Song.Stop();
             GameOver.Play();
+            break;
+
+        case SoundEffect.Win:
+            Song.Stop();
+            Win.Play();
             break;
         }
     }

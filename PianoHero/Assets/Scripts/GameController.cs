@@ -92,7 +92,7 @@ public class GameController : MonoBehaviour
 
             RetryText.SetActive(true);
 
-            AudioManager.Instance.PlaySoundEffect(AudioManager.SoundEffect.GameOver);
+            AudioManager.Instance.PlaySoundEffect(AudioManager.SoundEffect.Win);
        }
 
     
