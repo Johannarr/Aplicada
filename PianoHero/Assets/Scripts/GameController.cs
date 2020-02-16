@@ -16,6 +16,10 @@ public class GameController : MonoBehaviour
     public GameObject Crown2;
     public GameObject Crown3;
 
+    public GameObject Heart1;
+    public GameObject Heart2;
+    public GameObject Heart3;
+
     public GameObject RetryText;
     public TextMesh LivesText;
     public GameObject KeyPrefab;
@@ -38,6 +42,10 @@ public class GameController : MonoBehaviour
         Crown1 = GameObject.Find("crown1");
         Crown2 = GameObject.Find("crown2");
         Crown3 = GameObject.Find("crown3");
+
+        Heart1 = GameObject.Find("heart1");
+        Heart2 = GameObject.Find("heart2");
+        Heart3 = GameObject.Find("heart3");
         
         RetryText.SetActive(false);
         GameOverText.SetActive(false);
@@ -46,6 +54,10 @@ public class GameController : MonoBehaviour
         Crown1.SetActive(false);
         Crown2.SetActive(false);
         Crown3.SetActive(false);
+
+        Heart1.SetActive(true);
+        Heart2.SetActive(true);
+        Heart3.SetActive(true);
 
         InvokeRepeating("InstantiateKey", 0, 1.5f);
        
@@ -101,7 +113,8 @@ public class GameController : MonoBehaviour
 
     public int DecrementLives()
     {
-       CurrentLives = CurrentLives > 0 ? CurrentLives - 1 : 0;
+        CurrentLives = CurrentLives > 0 ? CurrentLives - 1 : 0;
+        Heart3.SetActive(false);
         LivesText.text = $"Lives: {CurrentLives}"; 
 
         if (CurrentLives == 0)
