@@ -16,8 +16,6 @@ public class GameController : MonoBehaviour
     public GameObject Crown2;
     public GameObject Crown3;
 
-    public GameObject Heart1;
-    public GameObject Heart2;
     public GameObject Heart3;
 
     public GameObject RetryText;
@@ -32,7 +30,7 @@ public class GameController : MonoBehaviour
         AudioManager.Instance.PlaySoundEffect(AudioManager.SoundEffect.Start);
 
         CurrentScore = 0;
-        CurrentLives = 3;
+        CurrentLives = 1;
 
         LivesText = GameObject.Find("LivesText").GetComponent<TextMesh>();
         GameOverText = GameObject.Find("GameOverText");
@@ -43,8 +41,6 @@ public class GameController : MonoBehaviour
         Crown2 = GameObject.Find("crown2");
         Crown3 = GameObject.Find("crown3");
 
-        Heart1 = GameObject.Find("heart1");
-        Heart2 = GameObject.Find("heart2");
         Heart3 = GameObject.Find("heart3");
         
         RetryText.SetActive(false);
@@ -55,8 +51,6 @@ public class GameController : MonoBehaviour
         Crown2.SetActive(false);
         Crown3.SetActive(false);
 
-        Heart1.SetActive(true);
-        Heart2.SetActive(true);
         Heart3.SetActive(true);
 
         InvokeRepeating("InstantiateKey", 0, 1.5f);
@@ -106,7 +100,6 @@ public class GameController : MonoBehaviour
 
             AudioManager.Instance.PlaySoundEffect(AudioManager.SoundEffect.Win);
        }
-
     
        return CurrentScore;
     }
@@ -117,8 +110,10 @@ public class GameController : MonoBehaviour
         Heart3.SetActive(false);
         LivesText.text = $"Lives: {CurrentLives}"; 
 
+
         if (CurrentLives == 0)
         {
+
             StartCoroutine("SendScore");
 
             GameOverText.SetActive(true);
@@ -127,7 +122,6 @@ public class GameController : MonoBehaviour
 
             AudioManager.Instance.PlaySoundEffect(AudioManager.SoundEffect.GameOver);
         }
-
 
         return CurrentLives;
     }

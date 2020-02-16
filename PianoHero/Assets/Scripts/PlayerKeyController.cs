@@ -7,11 +7,8 @@ public class PlayerKeyController : MonoBehaviour
 
     GameController gameController;
 
-    Vector2 KeyPosition;
-
     void Start()
     {
-
         gameController = GameObject.Find("GlobalScriptsText").GetComponent<GameController>();
     }
 
@@ -20,16 +17,13 @@ public class PlayerKeyController : MonoBehaviour
     {
 
         // Script para que pierda vida si no toco las teclas, presenta fallas
-       /* if (Input.touchCount > 0)
+        if (Input.touchCount > 0)
         {
             gameController.DecrementLives();  
-        }*/
-
-       
+        }
+  
 
     }
-
-
 
 
     // cuando el mouse o el touch toque el objeto se entrara a la funcion, es necesario que el objeto en cuestion tenga collider para que funcione
@@ -42,5 +36,4 @@ public class PlayerKeyController : MonoBehaviour
         AudioManager.Instance.PlaySoundEffect(AudioManager.SoundEffect.Capture);  
         
     }
-
 }
