@@ -12,12 +12,10 @@ public class GameController : MonoBehaviour
     public GameObject GameOverText;
     public GameObject WinText;
 
-    public GameObject Crown1;
-    public GameObject Crown2;
-    public GameObject Crown3;
+    public GameObject Coin;
+    public GameObject Coin2;
+    public GameObject Coin3;
 
-    public GameObject Heart1;
-    public GameObject Heart2;
     public GameObject Heart3;
 
     public GameObject RetryText;
@@ -32,31 +30,27 @@ public class GameController : MonoBehaviour
         AudioManager.Instance.PlaySoundEffect(AudioManager.SoundEffect.Start);
 
         CurrentScore = 0;
-        CurrentLives = 3;
+        CurrentLives = 4;
 
         LivesText = GameObject.Find("LivesText").GetComponent<TextMesh>();
         GameOverText = GameObject.Find("GameOverText");
         WinText = GameObject.Find("WinText");
         RetryText = GameObject.Find("RetryText");
 
-        Crown1 = GameObject.Find("crown1");
-        Crown2 = GameObject.Find("crown2");
-        Crown3 = GameObject.Find("crown3");
+        Coin = GameObject.Find("Coin");
+        Coin2 = GameObject.Find("Coin2");
+        Coin3 = GameObject.Find("Coin3");
 
-        Heart1 = GameObject.Find("heart1");
-        Heart2 = GameObject.Find("heart2");
-        Heart3 = GameObject.Find("heart3");
+        Heart3 = GameObject.Find("Heart3");
         
         RetryText.SetActive(false);
         GameOverText.SetActive(false);
         WinText.SetActive(false);
 
-        Crown1.SetActive(false);
-        Crown2.SetActive(false);
-        Crown3.SetActive(false);
+        Coin.SetActive(false);
+        Coin2.SetActive(false);
+        Coin3.SetActive(false);
 
-        Heart1.SetActive(true);
-        Heart2.SetActive(true);
         Heart3.SetActive(true);
 
         InvokeRepeating("InstantiateKey", 0, 1.5f);
@@ -88,15 +82,15 @@ public class GameController : MonoBehaviour
 
        if (CurrentScore == 2)
        {
-           Crown1.SetActive(true);
+           Coin.SetActive(true);
        }
        else if (CurrentScore == 4)
        {
-           Crown2.SetActive(true);
+           Coin2.SetActive(true);
        }
         else if (CurrentScore == 5)
        {
-            Crown3.SetActive(true);
+            Coin3.SetActive(true);
             
             StartCoroutine("SendScore");
 
@@ -106,7 +100,6 @@ public class GameController : MonoBehaviour
 
             AudioManager.Instance.PlaySoundEffect(AudioManager.SoundEffect.Win);
        }
-
     
        return CurrentScore;
     }
@@ -114,11 +107,15 @@ public class GameController : MonoBehaviour
     public int DecrementLives()
     {
         CurrentLives = CurrentLives > 0 ? CurrentLives - 1 : 0;
-        Heart3.SetActive(false);
+       
         LivesText.text = $"Lives: {CurrentLives}"; 
+
 
         if (CurrentLives == 0)
         {
+
+            Heart3.SetActive(false);
+
             StartCoroutine("SendScore");
 
             GameOverText.SetActive(true);
@@ -127,7 +124,6 @@ public class GameController : MonoBehaviour
 
             AudioManager.Instance.PlaySoundEffect(AudioManager.SoundEffect.GameOver);
         }
-
 
         return CurrentLives;
     }
