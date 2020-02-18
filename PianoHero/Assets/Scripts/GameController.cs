@@ -13,10 +13,11 @@ public class GameController : MonoBehaviour
     public GameObject WinText;
 
     public GameObject Coin;
-    public GameObject Coin2;
-    public GameObject Coin3;
+    public GameObject Crown;
+    public GameObject Crown2;
+    public GameObject Crown3;
 
-    public GameObject Heart3;
+    public GameObject Heart;
 
     public GameObject RetryText;
     public TextMesh LivesText;
@@ -38,20 +39,25 @@ public class GameController : MonoBehaviour
         RetryText = GameObject.Find("RetryText");
 
         Coin = GameObject.Find("Coin");
-        Coin2 = GameObject.Find("Coin2");
-        Coin3 = GameObject.Find("Coin3");
+        Crown = GameObject.Find("Crown");
+        Crown2 = GameObject.Find("Crown2");
+        Crown3 = GameObject.Find("Crown3");
 
-        Heart3 = GameObject.Find("Heart3");
+        Heart = GameObject.Find("Heart3");
         
         RetryText.SetActive(false);
         GameOverText.SetActive(false);
         WinText.SetActive(false);
 
-        Coin.SetActive(false);
-        Coin2.SetActive(false);
-        Coin3.SetActive(false);
+        Coin.SetActive(true);
 
-        Heart3.SetActive(true);
+        Crown.SetActive(false);
+        Crown2.SetActive(false);
+        Crown3.SetActive(false);
+
+        
+
+        Heart.SetActive(true);
 
         InvokeRepeating("InstantiateKey", 0, 1.5f);
        
@@ -82,15 +88,15 @@ public class GameController : MonoBehaviour
 
        if (CurrentScore == 2)
        {
-           Coin.SetActive(true);
+           Crown.SetActive(true);
        }
        else if (CurrentScore == 4)
        {
-           Coin2.SetActive(true);
+           Crown2.SetActive(true);
        }
         else if (CurrentScore == 5)
        {
-            Coin3.SetActive(true);
+            Crown3.SetActive(true);
             
             StartCoroutine("SendScore");
 
@@ -114,7 +120,7 @@ public class GameController : MonoBehaviour
         if (CurrentLives == 0)
         {
 
-            Heart3.SetActive(false);
+            Heart.SetActive(false);
 
             StartCoroutine("SendScore");
 
