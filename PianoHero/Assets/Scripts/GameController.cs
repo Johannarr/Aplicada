@@ -55,8 +55,6 @@ public class GameController : MonoBehaviour
         Crown2.SetActive(false);
         Crown3.SetActive(false);
 
-        
-
         Heart.SetActive(true);
 
         InvokeRepeating("InstantiateKey", 0, 1.5f);
