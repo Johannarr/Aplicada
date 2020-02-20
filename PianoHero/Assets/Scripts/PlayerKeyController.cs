@@ -9,6 +9,7 @@ public class PlayerKeyController : MonoBehaviour
 
     void Start()
     {
+        // obtenemos el gameconbroller que esta ubicado en GlobalScripsText
         gameController = GameObject.Find("GlobalScriptsText").GetComponent<GameController>();
     }
 
@@ -16,7 +17,7 @@ public class PlayerKeyController : MonoBehaviour
     void Update()
     {
 
-        // Script para que pierda vida si no toco las teclas, presenta fallas
+        // Si el touch toca en cualquier lugar que no sea la tecla entrara aqui
         if (Input.touchCount > 0)
         {
             gameController.DecrementLives();  
@@ -33,7 +34,6 @@ public class PlayerKeyController : MonoBehaviour
         gameController.IncrementScore();
         Destroy(gameObject); 
 
-        AudioManager.Instance.PlaySoundEffect(AudioManager.SoundEffect.Capture);  
-        
+        //AudioManager.Instance.PlaySoundEffect(AudioManager.SoundEffect.Capture);  
     }
 }

@@ -12,5 +12,4 @@ public class RestartGame : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
     }
-
 }

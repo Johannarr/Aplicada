@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
     
     public static AudioManager Instance;
 
-    //Agrego los distintos audio source que se utilizaran
+    //Agrego los distintos audio source que se utilizaran en esta clase
     public AudioSource KeyLost;
 
     public AudioSource KeyCapture;
@@ -25,18 +25,19 @@ public class AudioManager : MonoBehaviour
         Instance = this;
     }
     
-    // Este enum sirve para poder identificar los sonidos que se utilizaran en cada etapa y se utilizaran mediante el switch
-    //case de mas abajo
+    // Este enum sirve para poder identificar los sonidos que se utilizaran en cada etapa
     public enum SoundEffect
     {
         Start,
         Lost,
         Capture,
         GameOver,
-
         Win
     }
 
+    
+    // En esta funcion se especifica mediante switch case, los distintos casos en lo que se utilizara cada sonido
+    //Esta funcion tiene como parametro el enum definido aqui arriba, esta funcion no returna nada.
     public void PlaySoundEffect(SoundEffect type)
     {
         switch (type)
