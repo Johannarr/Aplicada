@@ -4,23 +4,37 @@ using UnityEngine;
 
 public class ESPlayerController : MonoBehaviour
 {
+    public TextMesh PlayerLivesText;
+    public GameObject GameOverText;
+    public bool IsGameOver;
     const float Y_MIN_LIMIT = -4.2f;
     const float Y_MAX_LIMIT = 4.2f;
 
     [SerializeField]
     Vector3 MovementSpeed = new Vector3(0,10f), _deltaPos;
-     ScoreController _scoreController; 
+    ScoreController _scoreController; 
+    int _lives = 3;
+
    
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        _scoreController = GameObject.Find("GlobalScriptsText").GetComponent<ScoreController>();
+         _scoreController = GameObject.Find("GlobalScriptsText").GetComponent<ScoreController>();
+         GameOverText=GameObject.Find("GameOverText");
+         GameOverText.SetActive(false);
+    }
+    private void Start()
+    {
+       PlayerLivesText.text = _lives.ToString();
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (IsGameOver)
+            return;
+            
         _deltaPos = MovementSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
         gameObject.transform.Translate(_deltaPos);
         gameObject.transform.position = new Vector3(gameObject.transform.position.x,
@@ -51,6 +65,17 @@ public class ESPlayerController : MonoBehaviour
             case "Yellow":
                 _scoreController.IncrementScore(EssenceType.Yellow);
                 break;
+            case "Enemy":
+                _lives--;
+                PlayerLivesText.text = _lives.ToString();
+                if (_lives<=0)
+                {
+                    //Game Over
+                    IsGameOver=true;
+                    GameOverText.SetActive(true);
+                }
+                break;
+        
         }
         Destroy(other.gameObject);
     }

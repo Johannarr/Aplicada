@@ -15,14 +15,22 @@ public class EsenciaInstantiator : MonoBehaviour
 {
     
     float _lastSpawnedTime, _spawnDeltaTime = 0.5f;
+    float enemyProbability = 16.7f;
     Dictionary<EssenceType, GameObject> EssencePrefabs;
+    ESPlayerController _playerControllerEssence;
     public GameObject  BlueEssencePrefab, 
                         YellowEssencePrefab, 
                         RedEssencePrefab, 
                         GreenEssencePrefab, 
                         PurpleEssencePrefab, 
-                        PinkEssencePrefab;
+                        PinkEssencePrefab,
+                        EnemyPrefab;
     // Start is called before the first frame update
+    
+    private void Awake()
+    {
+        _playerControllerEssence = GameObject.FindGameObjectWithTag("Player").GetComponent<ESPlayerController>();
+    }
     void Start()
     {
         _lastSpawnedTime = Time.time;
@@ -39,10 +47,11 @@ public class EsenciaInstantiator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - _lastSpawnedTime > _spawnDeltaTime)
+        if (!_playerControllerEssence.IsGameOver && Time.time - _lastSpawnedTime > _spawnDeltaTime)
         {
             _lastSpawnedTime = Time.time;
             InstantiateEssence();
+            InstantiateEnemy();
         }
         
     }
@@ -51,4 +60,13 @@ public class EsenciaInstantiator : MonoBehaviour
     {
         Instantiate(EssencePrefabs[(EssenceType)Random.Range(0,6)], new Vector3(10, Random.Range(-4,5)), Quaternion.identity);
     }
+
+    void InstantiateEnemy()
+    {
+        if (Random.Range(0f, 100f)<=enemyProbability)
+        {
+            Instantiate(EnemyPrefab, new Vector3(10, Random.Range(-4,5)), Quaternion.identity);
+        }
+    }
+
 }

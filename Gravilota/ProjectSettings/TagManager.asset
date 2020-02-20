@@ -10,6 +10,7 @@ TagManager:
   - Pink
   - Yellow
   - Purple
+  - Enemy
   layers:
   - Default
   - TransparentFX
