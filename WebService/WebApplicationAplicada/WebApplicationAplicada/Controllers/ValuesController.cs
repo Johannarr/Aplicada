@@ -28,7 +28,7 @@ namespace WebApplicationAplicada.Controllers
         {
         }
 
-        /*// PUT api/values
+        // PUT api/values
         public int Put([FromBody]GravilotaScore newScore)
         {
             GravilotaScore gScore = new GravilotaScore();
@@ -39,9 +39,9 @@ namespace WebApplicationAplicada.Controllers
             dbContext.GravilotaScores.Add(gScore);
             return dbContext.SaveChanges();
 
-        }*/
+        }
 
-
+/*
         // PUT api/values
         public int Put([FromBody]PianoHeroScore newScore)
         {
@@ -53,7 +53,7 @@ namespace WebApplicationAplicada.Controllers
             dbContext.PianoHeroScores.Add(gScore);
             return dbContext.SaveChanges();
 
-        }
+        }*/
 
 
         // DELETE api/values/5

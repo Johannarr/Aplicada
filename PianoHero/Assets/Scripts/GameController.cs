@@ -84,6 +84,7 @@ public class GameController : MonoBehaviour
 
         else if (CurrentScore == 230)  
         {
+             StartCoroutine("SendScore");
             return;
         }
 
@@ -112,7 +113,6 @@ public class GameController : MonoBehaviour
        {
             Crown3.SetActive(true);
             
-            StartCoroutine("SendScore");
 
             WinText.SetActive(true);
 
