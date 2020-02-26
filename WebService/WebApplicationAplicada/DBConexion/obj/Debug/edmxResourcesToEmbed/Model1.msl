@@ -19,5 +19,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="EsenciaScores">
+      <EntityTypeMapping TypeName="AplicadaDBModel.EsenciaScore">
+        <MappingFragment StoreEntitySet="EsenciaScore">
+          <ScalarProperty Name="RedScore" ColumnName="RedScore" />
+          <ScalarProperty Name="PinkScore" ColumnName="PinkScore" />
+          <ScalarProperty Name="PurpleScore" ColumnName="PurpleScore" />
+          <ScalarProperty Name="YellowScore" ColumnName="YellowScore" />
+          <ScalarProperty Name="GreenScore" ColumnName="GreenScore" />
+          <ScalarProperty Name="BlueScore" ColumnName="BlueScore" />
+          <ScalarProperty Name="PlayerName" ColumnName="PlayerName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

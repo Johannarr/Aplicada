@@ -19,5 +19,19 @@
   <EntityContainer Name="AplicadaDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="GravilotaScores" EntityType="Self.GravilotaScore" />
     <EntitySet Name="PianoHeroScores" EntityType="Self.PianoHeroScore" />
+    <EntitySet Name="EsenciaScores" EntityType="AplicadaDBModel.EsenciaScore" />
   </EntityContainer>
+  <EntityType Name="EsenciaScore">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlayerName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BlueScore" Type="Double" Nullable="false" />
+    <Property Name="GreenScore" Type="Double" Nullable="false" />
+    <Property Name="YellowScore" Type="Double" Nullable="false" />
+    <Property Name="PurpleScore" Type="Double" Nullable="false" />
+    <Property Name="PinkScore" Type="Double" Nullable="false" />
+    <Property Name="RedScore" Type="Double" Nullable="false" />
+  </EntityType>
 </Schema>

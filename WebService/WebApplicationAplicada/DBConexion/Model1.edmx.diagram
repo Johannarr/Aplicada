@@ -7,6 +7,7 @@
       <Diagram DiagramId="5893971f5cb947b0bdbba564e869845d" Name="Diagram1">
         <EntityTypeShape EntityType="AplicadaDBModel.GravilotaScore" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AplicadaDBModel.PianoHeroScore" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AplicadaDBModel.EsenciaScore" Width="1.5" PointX="0.75" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

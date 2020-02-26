@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScoreController : MonoBehaviour
 {
    
-    int[] _scores = new int[6];
+    public int[] _scores = new int[6];
 
     public TextMesh BlueScoreText, GreenScoreText, PinkScoreText, PurpleScoreText, RedScoreText,
     YellowScoreText;
@@ -35,9 +35,7 @@ public class ScoreController : MonoBehaviour
                 YellowScoreText.text = _scores[(int)number].ToString();
                 break;
         }
+
     }
-
-
-
 
 }
