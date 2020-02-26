@@ -1335,6 +1335,7 @@ GameObject:
   - component: {fileID: 1399568478}
   - component: {fileID: 1399568481}
   - component: {fileID: 1399568477}
+  - component: {fileID: 1399568482}
   m_Layer: 0
   m_Name: GlobalScriptsText
   m_TagString: Untagged
@@ -1453,12 +1454,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240012e27de55a94b9508c953eacc862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scores: 000000000000000000000000000000000000000000000000
   BlueScoreText: {fileID: 1073391463}
   GreenScoreText: {fileID: 925214586}
   PinkScoreText: {fileID: 605037378}
   PurpleScoreText: {fileID: 1864815983}
   RedScoreText: {fileID: 746640856}
   YellowScoreText: {fileID: 1440743847}
+--- !u!114 &1399568482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399568476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a935771dc25178149aad90071166c3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1440743845
 GameObject:
   m_ObjectHideFlags: 0
