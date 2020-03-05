@@ -4,16 +4,26 @@ using UnityEngine;
 
 public class PlayerControllerCannon : MonoBehaviour
 {
+    float _barValue;
+    public GameObject ProgressBar;
     const float MINX = -8f, MAXX = 8f;
     Vector3 _deltaPos, _mousePosition;
 
     float _speedX = 20f;
-    float _triggerSpeed = 10f, _triggerAngle;
+    LineRenderer _trajectory;
+    float _triggerSpeed = 30f, _triggerAngle;
     public GameObject CannonBallPrefab;
+    const int _trajectoryVertices = 20;
     // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
+    {
+        _trajectory = GetComponent<LineRenderer>();
+    }
+        void Start()
     {
         _deltaPos = new Vector3();
+        _trajectory.positionCount= _trajectoryVertices;
 
     }
 
@@ -47,15 +57,39 @@ public class PlayerControllerCannon : MonoBehaviour
         else 
             _triggerAngle= Mathf.Atan(_deltaPos.y / _deltaPos.x);// * Mathf.Rad2Deg;
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1"))
         {
-            Instantiate(CannonBallPrefab, gameObject.transform.position, 
-            Quaternion.identity).GetComponent<CannonBallBehaviour>().Shoot(_triggerSpeed, _triggerAngle);
+           _barValue = Mathf.PingPong(Time.time, 1) * 100f;
+            ProgressBar.GetComponent<ProgressBar>().BarValue = Mathf.PingPong(Time.time, 1)*100f;
+            
 
         }
 
+        else if (Input.GetButtonUp("Fire1"))
+        {
+            Instantiate(CannonBallPrefab, gameObject.transform.position, 
+            Quaternion.identity).GetComponent<CannonBallBehaviour>().Shoot(_triggerSpeed * (_barValue/100),
+             _triggerAngle);
+        }
+
+        for (int i =0; i<_trajectoryVertices; i++ )
+        {
+            _trajectory.SetPosition(i, GetPosition((float)i/_trajectoryVertices,Mathf.Pow(_triggerSpeed, 2)*
+             Mathf.Sin(_triggerAngle * 2) / Mathf.Abs(Physics.gravity.y)));
+        }
+
         
-        Debug.Log((_triggerAngle)* Mathf.Rad2Deg);
+        //Debug.Log((_triggerAngle)* Mathf.Rad2Deg);
         
+    }
+
+    Vector3 GetPosition( float resolutionProportion, float xMax)
+    {
+        float xRelative =  resolutionProportion * xMax;
+        float yRelative = xRelative * Mathf.Tan(_triggerAngle) - (Mathf.Abs(Physics.gravity.y) * 
+        Mathf.Pow(xRelative,2)) / (2*(_triggerSpeed * (_barValue / 100))*(_triggerSpeed* (_barValue/100))
+        * Mathf.Cos(Mathf.Pow(_triggerAngle, 2)));
+
+        return new Vector3(xRelative, yRelative);
     }
 }
