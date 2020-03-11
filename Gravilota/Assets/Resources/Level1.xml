@@ -1,0 +1,39 @@
+<level>
+	<map> 
+		<row><![CDATA[AABBAAAAAAAAABBBBABAABBBA]]></row>
+		<row><![CDATA[BAAGAABBABABBCABBBABAAABB]]></row>
+		<row><![CDATA[AAAJABBBBABBBAABBAABBABBA]]></row>
+		<row><![CDATA[BBAJABBAABBBBABBBAAABABBA]]></row>
+		<row><![CDATA[BFIDIIIIIIEBAAAABCCCCAAAA]]></row>
+		<row><![CDATA[BBBJAAAABBABAAAAAABAAABBA]]></row>
+		<row><![CDATA[BBBJAABAABBABABBAABABAAAA]]></row>
+		<row><![CDATA[BBBJABBBABCAABBAAAABBBAAA]]></row>
+		<row><![CDATA[ACBJBBAAAAAABBBBBAABBBACA]]></row>
+		<row><![CDATA[ACACIIIIIIIIDIIIIIIIIIIDE]]></row>
+		<row><![CDATA[BAABABAAAAAAABAABABBABAJA]]></row>
+		<row><![CDATA[ACAAABBAABAAAAAAAAGBBABJB]]></row>
+		<row><![CDATA[BCBABABAAAACBBBAAAJABBBJA]]></row>
+		<row><![CDATA[BBBBAAAAABBABBBBBBJBAAAJA]]></row>
+		<row><![CDATA[ACAAAAAAAAABAABBAAJBABBJB]]></row>
+		<row><![CDATA[ACAAAAFIIIIIIIIIIIDIIEAJA]]></row>
+		<row><![CDATA[BBAABAAAABABBBAABAJBBBBJA]]></row>
+		<row><![CDATA[BBBBABAGBABAAABBBBJBBBAJB]]></row>
+		<row><![CDATA[AABBBABJBBBAAABAAAHBBBBJA]]></row>
+		<row><![CDATA[BFIIIIIDIIIIIIIIIEABABBJB]]></row>
+		<row><![CDATA[AABBABBJAABABABABBAABBAJB]]></row>
+		<row><![CDATA[AABAAAAJABBBABAABBAAABBJA]]></row>
+		<row><![CDATA[AABBBABJAABBABABBACAABBJA]]></row>
+		<row><![CDATA[BACBBABJBBACAAABAABAAACBB]]></row>
+		<row><![CDATA[BAAAABBHABABBABAAAABABABA]]></row>
+	</map>
+	<characters>
+		<character id="0" uniqueObjectName="Player" prefabName="Player" posX="32" posY="17" tag="Player"/>
+		<character id="1" uniqueObjectName="Morah" prefabName="Morah" posX="38" posY="11" tag="NPC"/>
+		<character id="2" uniqueObjectName="Lionel" prefabName="Lionel" posX="22" posY="11" tag="NPC"/>
+	</characters>
+	<items>
+		<item id="0" uniqueObjectName="Chest1" prefabName="ChestBanana" posX="1" posY="36" tag="EssenceItem"/>
+		<item id="1" uniqueObjectName="Chest2" prefabName="ChestCherry" posX="30" posY="39" tag="EssenceItem"/>
+		<item id="2" uniqueObjectName="Chest3" prefabName="ChestGrape" posX="57" posY="39" tag="EssenceItem"/>
+	</items>
+</level>

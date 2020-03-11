@@ -11,6 +11,10 @@ TagManager:
   - Yellow
   - Purple
   - Enemy
+  - DangerousTile
+  - LargeTile
+  - LevelChanger
+  - menos
   layers:
   - Default
   - TransparentFX
@@ -20,8 +24,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - tree
+  - terrain
   - 
   - 
   - 
