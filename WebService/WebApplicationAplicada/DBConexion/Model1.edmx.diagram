@@ -8,6 +8,7 @@
         <EntityTypeShape EntityType="AplicadaDBModel.GravilotaScore" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AplicadaDBModel.PianoHeroScore" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AplicadaDBModel.EsenciaScore" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="AplicadaDBModel.NinjaRunnerScore" Width="1.5" PointX="3.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

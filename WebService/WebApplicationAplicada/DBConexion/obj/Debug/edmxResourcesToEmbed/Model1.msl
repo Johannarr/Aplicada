@@ -33,5 +33,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="NinjaRunnerScores">
+      <EntityTypeMapping TypeName="AplicadaDBModel.NinjaRunnerScore">
+        <MappingFragment StoreEntitySet="NinjaRunnerScore">
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="PlayerName" ColumnName="PlayerName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

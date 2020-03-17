@@ -29,31 +29,44 @@ namespace WebApplicationAplicada.Controllers
         }
 
         // PUT api/values
-        public int Put([FromBody]GravilotaScore newScore)
+        public int Put([FromBody] NinjaRunnerScore newScore)
         {
-            GravilotaScore gScore = new GravilotaScore();
+            NinjaRunnerScore gScore = new NinjaRunnerScore();
             gScore.Id = newScore.Id;
             gScore.PlayerName = newScore.PlayerName;
             gScore.Score = newScore.Score;
 
-            dbContext.GravilotaScores.Add(gScore);
+            dbContext.NinjaRunnerScores.Add(gScore);
             return dbContext.SaveChanges();
 
         }
 
-/*
-        // PUT api/values
-        public int Put([FromBody]PianoHeroScore newScore)
-        {
-            PianoHeroScore gScore = new PianoHeroScore();
-            gScore.Id = newScore.Id;
-            gScore.PlayerName = newScore.PlayerName;
-            gScore.Score = newScore.Score;
+        /* // PUT api/values
+         public int Put([FromBody]GravilotaScore newScore)
+         {
+             GravilotaScore gScore = new GravilotaScore();
+             gScore.Id = newScore.Id;
+             gScore.PlayerName = newScore.PlayerName;
+             gScore.Score = newScore.Score;
 
-            dbContext.PianoHeroScores.Add(gScore);
-            return dbContext.SaveChanges();
+             dbContext.GravilotaScores.Add(gScore);
+             return dbContext.SaveChanges();
 
-        }*/
+         }*/
+
+        /*
+                // PUT api/values
+                public int Put([FromBody]PianoHeroScore newScore)
+                {
+                    PianoHeroScore gScore = new PianoHeroScore();
+                    gScore.Id = newScore.Id;
+                    gScore.PlayerName = newScore.PlayerName;
+                    gScore.Score = newScore.Score;
+
+                    dbContext.PianoHeroScores.Add(gScore);
+                    return dbContext.SaveChanges();
+
+                }*/
 
 
         // DELETE api/values/5

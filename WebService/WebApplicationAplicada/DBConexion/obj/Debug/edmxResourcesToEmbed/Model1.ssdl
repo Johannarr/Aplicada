@@ -21,6 +21,14 @@
     <Property Name="PlayerName" Type="nvarchar" MaxLength="50" />
     <Property Name="Score" Type="float" />
   </EntityType>
+  <EntityType Name="NinjaRunnerScore">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlayerName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Score" Type="float" />
+  </EntityType>
   <EntityType Name="PianoHeroScore">
     <Key>
       <PropertyRef Name="Id" />
@@ -32,6 +40,7 @@
   <EntityContainer Name="AplicadaDBModelStoreContainer">
     <EntitySet Name="EsenciaScore" EntityType="Self.EsenciaScore" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GravilotaScore" EntityType="Self.GravilotaScore" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NinjaRunnerScore" EntityType="Self.NinjaRunnerScore" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PianoHeroScore" EntityType="Self.PianoHeroScore" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>
