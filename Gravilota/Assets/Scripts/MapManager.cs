@@ -95,12 +95,12 @@ public class MapManager : MonoBehaviour
                     break;
                 case "Morah":
                     break;
-                case "Lianel":
+                case "Lionel":
                     break;
             }
             newElement = Instantiate (currentPrefab, 
             new Vector3(Convert.ToSingle(currentElement.Attributes["posX"].Value),
-            Convert.ToSingle(currentElement.Attributes["posY"].Value)),
+            -Convert.ToSingle(currentElement.Attributes["posY"].Value)),
             Quaternion.identity);
 
             newElement.name = currentElement.Attributes["uniqueObjectName"].Value;
