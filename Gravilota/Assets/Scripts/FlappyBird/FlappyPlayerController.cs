@@ -5,47 +5,28 @@ using UnityEngine;
 public class FlappyPlayerController : MonoBehaviour
 {
    
-    //public TextMesh PlayerLivesText;
-    public GameObject GameOverText;
-    public bool IsGameOver;
     const float Y_MIN_LIMIT = -4.2f;
     const float Y_MAX_LIMIT = 4.2f;
 
     [SerializeField]
     Vector3 MovementSpeed = new Vector3(0,10f), _deltaPos;
-    ScoreController _scoreController; 
-    int _lives = 3;
-    Animator _animator;
     float _lastVerticalAxis;
-    ESWebClient _webClient;
-
+    GameControllerFlappy gameController;
+    
    
     // Start is called before the first frame update
-    private void Awake()
-    {
-        _webClient = GameObject.Find("GlobalScriptsText").GetComponent<ESWebClient>();
-         _animator = GetComponent<Animator>();
-         _scoreController = GameObject.Find("GlobalScriptsText").GetComponent<ScoreController>();
-         GameOverText=GameObject.Find("GameOverText");
-         GameOverText.SetActive(false);
-    }
     private void Start()
     {
-       ESAudioManager.Instance.PlaySoundEffect(ESAudioManager.SoundEffect.Start);
-       //PlayerLivesText.text = _lives.ToString();
-        
+      gameController = GameObject.Find("GlobalScriptText").GetComponent<GameControllerFlappy>(); 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (IsGameOver)
-            return;
-
+       
         if (_lastVerticalAxis != Input.GetAxis("Vertical"))
         {
             _lastVerticalAxis = Input.GetAxis("Vertical");
-            _animator.SetFloat("VerticalAxis", _lastVerticalAxis );
         }
             
         _deltaPos = MovementSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
@@ -55,25 +36,22 @@ public class FlappyPlayerController : MonoBehaviour
                                                     gameObject.transform.position.z);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter (Collider other)
     {
-        
-           
-                
-                //PlayerLivesText.text = _lives.ToString();
-               // ESAudioManager.Instance.PlaySoundEffect(ESAudioManager.SoundEffect.Explode);
-                if (_lives<=0)
-                {
-                    //Game Over
-                    IsGameOver=true;
-                    GameOverText.SetActive(true);
-                   // ESAudioManager.Instance.PlaySoundEffect(ESAudioManager.SoundEffect.GameOver);
-                   // _webClient.SaveScore();
+       
+            if (other.tag == "Obst"){
+            gameController.GameOver();
+            FlappyAudioManager.Instance.PlaySoundEffect(FlappyAudioManager.SoundEffect.ObstaculeCapture); 
+                        
+            }  
 
-                }
-        
-        
-        //ESAudioManager.Instance.PlaySoundEffect(ESAudioManager.SoundEffect.Capture);
-        Destroy(other.gameObject);
+            if (other.tag == "Score")
+            {
+                gameController.IncrementScore();
+                FlappyAudioManager.Instance.PlaySoundEffect(FlappyAudioManager.SoundEffect.ScoreCapture);
+            } 
+
     }
+
+  
 }

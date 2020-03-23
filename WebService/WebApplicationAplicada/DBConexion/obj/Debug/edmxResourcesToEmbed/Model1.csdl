@@ -21,6 +21,7 @@
     <EntitySet Name="PianoHeroScores" EntityType="Self.PianoHeroScore" />
     <EntitySet Name="EsenciaScores" EntityType="AplicadaDBModel.EsenciaScore" />
     <EntitySet Name="NinjaRunnerScores" EntityType="AplicadaDBModel.NinjaRunnerScore" />
+    <EntitySet Name="FlappyScores" EntityType="AplicadaDBModel.FlappyScore" />
   </EntityContainer>
   <EntityType Name="EsenciaScore">
     <Key>
@@ -42,5 +43,13 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="PlayerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Score" Type="Double" />
+  </EntityType>
+  <EntityType Name="FlappyScore">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlayerName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Score" Type="Double" Nullable="false" />
   </EntityType>
 </Schema>

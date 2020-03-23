@@ -29,5 +29,6 @@ namespace DBConexion
         public virtual DbSet<PianoHeroScore> PianoHeroScores { get; set; }
         public virtual DbSet<EsenciaScore> EsenciaScores { get; set; }
         public virtual DbSet<NinjaRunnerScore> NinjaRunnerScores { get; set; }
+        public virtual DbSet<FlappyScore> FlappyScores { get; set; }
     }
 }

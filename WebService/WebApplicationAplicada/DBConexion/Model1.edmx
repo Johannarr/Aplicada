@@ -18,6 +18,14 @@
           <Property Name="PinkScore" Type="float" Nullable="false" />
           <Property Name="RedScore" Type="float" Nullable="false" />
         </EntityType>
+        <EntityType Name="FlappyScore">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlayerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Score" Type="float" Nullable="false" />
+        </EntityType>
         <EntityType Name="GravilotaScore">
           <Key>
             <PropertyRef Name="Id" />
@@ -44,6 +52,7 @@
         </EntityType>
         <EntityContainer Name="AplicadaDBModelStoreContainer">
           <EntitySet Name="EsenciaScore" EntityType="Self.EsenciaScore" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FlappyScore" EntityType="Self.FlappyScore" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GravilotaScore" EntityType="Self.GravilotaScore" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NinjaRunnerScore" EntityType="Self.NinjaRunnerScore" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PianoHeroScore" EntityType="Self.PianoHeroScore" Schema="dbo" store:Type="Tables" />
@@ -73,6 +82,7 @@
           <EntitySet Name="PianoHeroScores" EntityType="Self.PianoHeroScore" />
           <EntitySet Name="EsenciaScores" EntityType="AplicadaDBModel.EsenciaScore" />
           <EntitySet Name="NinjaRunnerScores" EntityType="AplicadaDBModel.NinjaRunnerScore" />
+          <EntitySet Name="FlappyScores" EntityType="AplicadaDBModel.FlappyScore" />
         </EntityContainer>
         <EntityType Name="EsenciaScore">
           <Key>
@@ -94,6 +104,14 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="PlayerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Score" Type="Double" />
+        </EntityType>
+        <EntityType Name="FlappyScore">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlayerName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Score" Type="Double" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -136,6 +154,15 @@
           <EntitySetMapping Name="NinjaRunnerScores">
             <EntityTypeMapping TypeName="AplicadaDBModel.NinjaRunnerScore">
               <MappingFragment StoreEntitySet="NinjaRunnerScore">
+                <ScalarProperty Name="Score" ColumnName="Score" />
+                <ScalarProperty Name="PlayerName" ColumnName="PlayerName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FlappyScores">
+            <EntityTypeMapping TypeName="AplicadaDBModel.FlappyScore">
+              <MappingFragment StoreEntitySet="FlappyScore">
                 <ScalarProperty Name="Score" ColumnName="Score" />
                 <ScalarProperty Name="PlayerName" ColumnName="PlayerName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
