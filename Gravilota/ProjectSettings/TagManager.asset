@@ -17,6 +17,7 @@ TagManager:
   - menos
   - Score
   - Obst
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - 
   - tree
   - terrain
-  - 
+  - character
   - 
   - 
   - 
@@ -53,4 +54,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Characters
+    uniqueID: 2793774185
     locked: 0

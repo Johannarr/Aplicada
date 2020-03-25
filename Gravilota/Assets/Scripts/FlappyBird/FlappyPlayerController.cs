@@ -42,6 +42,7 @@ public class FlappyPlayerController : MonoBehaviour
             if (other.tag == "Obst"){
             gameController.GameOver();
             FlappyAudioManager.Instance.PlaySoundEffect(FlappyAudioManager.SoundEffect.ObstaculeCapture); 
+            FlappyAudioManager.Instance.PlaySoundEffect(FlappyAudioManager.SoundEffect.GameOver); 
                         
             }  
 
