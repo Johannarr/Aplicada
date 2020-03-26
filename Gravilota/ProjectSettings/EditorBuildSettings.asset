@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 7128d02c6c9d5954daa363d315821065
+  - enabled: 1
+    path: Assets/Scenes/Taberna.unity
+    guid: 99dfabf878b09c04aa8617a9aa43cfe6
+  - enabled: 1
+    path: Assets/Scenes/ExplorationLevel.unity
+    guid: ef00feb66f920964db3f618dd9eadd98
+  - enabled: 1
+    path: Assets/Scenes/Esencia.unity
+    guid: 0b13d9c2ac840c146b73205dc12483ed
+  - enabled: 1
+    path: Assets/Scenes/Cannon.unity
+    guid: 4a9954c6ea828ba46b3f968c59324f45
+  - enabled: 1
+    path: Assets/Scenes/DejalosCaer.unity
+    guid: 006cc7ebb641a9f468ee2b1569e60b48
+  - enabled: 1
+    path: Assets/Scenes/FlappyBird.unity
+    guid: 2eaf5b08f57f16043ae07600b8d3edc0
   m_configObjects: {}
