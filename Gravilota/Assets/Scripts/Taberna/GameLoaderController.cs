@@ -13,9 +13,26 @@ public class GameLoaderController : MonoBehaviour
         {
             switch(gameObject.name)
             {
+                case "GameLoader0":
+                _sceneName="ExplorationLevel";
+                break;
+
                 case "GameLoader1":
+                _sceneName="SampleScene";
+                break;
+
+                case "GameLoader2":
+                _sceneName="Esencia";
+                break;
+
+                case "GameLoader3":
+                _sceneName="Cannon";
+                break;
+
+                case "GameLoader4":
                 _sceneName="FlappyBird";
                 break;
+                                
              }
             
         }
