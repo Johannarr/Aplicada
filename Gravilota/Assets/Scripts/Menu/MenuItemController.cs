@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-using 
+
 
 public class MenuItemController: MonoBehaviour
 {
 
 
-    const float _HOVERSCALEFACTOR = 1.4f;
+   /* const float _HOVERSCALEFACTOR = 1.4f;
     MenuController _menuController;
 
     private void Awake()
     {
-        _menuController = GameObject.Find("Global")
+       // _menuController = GameObject.Find("Global")
     }
     public void OnMouseEnter()
     {
@@ -29,19 +29,18 @@ public class MenuItemController: MonoBehaviour
     public void OnMouseUp()
     {
         if (_menuController.IsCanvasActive())
-        return;
+            return;
+        
         switch (gameObject.name)
         {
-            case "Jugar"
-            SceneManager.LoadScene("FlappyBird");
+            case "Jugar":
+                SceneManager.LoadScene("FlappyBird");
             break;
-
-            case "Opciones"
-            _menuController.ShowGameOptions();
+            case "Opciones":
+                _menuController.ShowGameOptions();
             break;
-
-            case "Salir"
-            Application.Quit();
+            case "Salir":
+                Application.Quit();
             break;
         }
 
@@ -59,10 +58,8 @@ public void CancelDialog()
     _menuController.HideGameOptions();
 }
 
-public void OnPlayerNameChanged(InputField input)
-{
-    
-}
+//public void OnPlayerNameChanged(InputField input)
 
-    // Start is called before the first frame update
+
+    // Start is called before the first frame update*/
 }

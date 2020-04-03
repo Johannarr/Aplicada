@@ -22,9 +22,9 @@ public class MenuController : MonoBehaviour
         _canvas.SetActive(false);
     }
 
-    public bool IsCanvasActive()
+   /* public bool IsCanvasActive()
     {
-        return _canvas.activeSeft;
-    }
+        //return _canvas.activeSeft;
+    }*/
     
 }
