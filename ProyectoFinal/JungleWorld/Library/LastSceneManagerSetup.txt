@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/BananaWorld.unity
+- path: Assets/Scenes/HunterWorld.unity
   isLoaded: 1
   isActive: 1

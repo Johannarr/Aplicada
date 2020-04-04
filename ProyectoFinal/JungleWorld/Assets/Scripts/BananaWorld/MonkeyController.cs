@@ -6,7 +6,7 @@ public class MonkeyController : MonoBehaviour
 {
     const float _MINX = -9.0f;
     const float _MAXX = 9.0f;
-    float _speeddX = 12f;
+    float _speeddX = 15f;
     Vector3 deltaPos;
     BananaWorldGameController gameController;
     // Start is called before the first frame update

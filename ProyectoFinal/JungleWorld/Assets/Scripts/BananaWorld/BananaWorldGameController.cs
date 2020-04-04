@@ -9,6 +9,8 @@ public class BananaWorldGameController : MonoBehaviour
     public int CurrentLives;
     public TextMesh ScoreText;
     public GameObject GameOverText;
+    
+    public GameObject WinText;
     public TextMesh LivesText;
     public GameObject BananaPrefab;
     const float MINX = -7.8f, MAXX = 7.8f;
@@ -21,9 +23,11 @@ public class BananaWorldGameController : MonoBehaviour
         CurrentLives = 3;
         LivesText = GameObject.Find("LivesText").GetComponent<TextMesh>();
         GameOverText = GameObject.Find("GameOverText");
+        WinText = GameObject.Find("WinText");
         
         InvokeRepeating("InstantiateBanana", 0, 1.5f);
         GameOverText.SetActive(false);
+        WinText.SetActive(false);
        
         
     }
@@ -36,7 +40,13 @@ public class BananaWorldGameController : MonoBehaviour
             GameOverText.SetActive(true);
             BananaWorldAudioManager.Instance.PlaySoundEffect(BananaWorldAudioManager.SoundEffect.GameOver);
             return;
-        }      
+        }  
+        else if (CurrentScore==5)
+        {
+            WinText.SetActive(true);
+            BananaWorldAudioManager.Instance.PlaySoundEffect(BananaWorldAudioManager.SoundEffect.Win);
+            return;
+        }    
         Instantiate(BananaPrefab, new Vector3 (Random.Range (MINX, MAXX),10,0), Quaternion.identity);
 
     }
