@@ -11,6 +11,9 @@ TagManager:
   - Red
   - Orange
   - Frog
+  - Cannon
+  - NPC
+  - EnemyBck
   layers:
   - Default
   - TransparentFX
@@ -21,10 +24,10 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
+  - terrain
+  - tree
+  - obstacle
+  - character
   - 
   - 
   - 
@@ -47,4 +50,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Terrains
+    uniqueID: 1175750619
+    locked: 0
+  - name: Trees
+    uniqueID: 2831518245
+    locked: 0
+  - name: Obstacles
+    uniqueID: 1764348463
+    locked: 0
+  - name: Characters
+    uniqueID: 2133891195
     locked: 0

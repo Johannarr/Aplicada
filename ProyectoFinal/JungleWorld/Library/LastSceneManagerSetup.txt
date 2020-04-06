@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/HunterWorld.unity
+- path: Assets/Scenes/ExplorationLevel.unity
   isLoaded: 1
   isActive: 1
