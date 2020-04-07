@@ -12,7 +12,7 @@ public class PlayerControllerExploLevel : MonoBehaviour
     SpriteRenderer _renderer;
     Vector3 _newPosition= new Vector3();
     bool _isEnemy, _canJump;
-    GameControllerExplo gameController;
+    public GameControllerExplo gameController;
     
     
 
