@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class PlayerControllerExploLevel : MonoBehaviour
 {
-    Vector3 _movementSpeed = new Vector3(5, 5),
+    Vector3 _movementSpeed = new Vector3(3, 3),
     _runningSpeed= new Vector3(15, 15);
     Rigidbody _rigidbody;
     Animator _animator;
     SpriteRenderer _renderer;
     Vector3 _newPosition= new Vector3();
-    bool _isEnemy;
+    bool _isEnemy, _canJump;
+    GameControllerExplo gameController;
 
     const float ENEMYMOVEDISTANCE = 5f, ENEMYATTACKDISTANCE=2f, ENEMYRUNNINGSPEED=10f;
     GameObject _player;
@@ -21,17 +22,18 @@ public class PlayerControllerExploLevel : MonoBehaviour
     
         _animator =GetComponent<Animator>();
         _renderer = GetComponent<SpriteRenderer>();
-        Physics.IgnoreLayerCollision(8, 10);
+        Physics.IgnoreLayerCollision(9, 12);
         _player=GameObject.FindGameObjectWithTag("Player");
 
     }
     void Start()
     {
-        Physics.IgnoreLayerCollision(9,10);
+        
         _rigidbody = GetComponent<Rigidbody>();
         _isEnemy = gameObject.tag == "Enemy";
-        
-       
+        gameController = GameObject.Find("GlobalScriptsText").GetComponent<GameControllerExplo>();
+
+
     }
 
     // Update is called once per frame
@@ -41,7 +43,9 @@ public class PlayerControllerExploLevel : MonoBehaviour
 
        if (!_isEnemy)
        {
-        _newPosition.x = Input.GetAxis("Horizontal")* (Input.GetButton("Fire3")
+            _canJump = true;
+
+            _newPosition.x = Input.GetAxis("Horizontal")* (Input.GetButton("Fire3")
         ? _runningSpeed.x : _movementSpeed.x);
         _newPosition.y = Input.GetAxis("Vertical")* (Input.GetButton("Fire3")
         ? _runningSpeed.y : _movementSpeed.y);
@@ -52,7 +56,9 @@ public class PlayerControllerExploLevel : MonoBehaviour
 
          _animator.SetBool("Attack", Input.GetButton("Fire1"));
         _renderer.flipX=_newPosition.x < 0;
-       }
+
+            ManageJump();
+        }
 
        else
        {
@@ -86,4 +92,48 @@ public class PlayerControllerExploLevel : MonoBehaviour
             }       
         }
     }
+
+    void ManageJump()
+    {
+
+
+        if (_canJump && Input.GetButton("Jump"))
+        {
+
+            gameObject.transform.Translate((6* Time.deltaTime),0, 0);
+            _animator.SetBool("Jump", true);
+
+        }
+
+        else
+        {
+
+            _canJump = false;
+            _animator.SetBool("Jump", false);
+
+
+        }
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.tag == "Coin")
+        {
+            gameController.IncrementScore();
+            ExploAudioManager.Instance.PlaySoundEffect(ExploAudioManager.SoundEffect.CaptureCoin);
+            Destroy(other.gameObject);
+        }
+
+        if (other.tag == "Powerup")
+        {
+            _canJump = true;
+            ExploAudioManager.Instance.PlaySoundEffect(ExploAudioManager.SoundEffect.CapturePowerUp);
+            Destroy(other.gameObject);
+        }
+
+    }
+
+    
 }

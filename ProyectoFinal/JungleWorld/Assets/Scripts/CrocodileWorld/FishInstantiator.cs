@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum FishType
-    {
+{
         Blue = 0,
         Green,
         Red,
         Orange,
         Frog,
-    }
+}
 public class FishInstantiator : MonoBehaviour
 {
     
@@ -19,7 +19,6 @@ public class FishInstantiator : MonoBehaviour
     CrocoPlayerController _playerControllerCroco;
     public GameObject  BlueFishPrefab, 
                         GreenFishPrefab, 
-
                         RedFishPrefab,
                         OrangeFishPrefab, 
                         FrogPrefab,
@@ -56,14 +55,14 @@ public class FishInstantiator : MonoBehaviour
 
     void InstantiateFish()
     {
-        Instantiate(FishPrefabs[(FishType)Random.Range(0,6)], new Vector3(12, Random.Range(-4,4)), Quaternion.identity);
+        Instantiate(FishPrefabs[(FishType)Random.Range(0,5)], new Vector3(12, Random.Range(-4,3)), Quaternion.identity);
     }
 
     void InstantiateEnemy()
     {
         if (Random.Range(0f, 100f)<=enemyProbability)
         {
-            Instantiate(EnemyPrefab, new Vector3(12, Random.Range(-4,4)), Quaternion.identity);
+            Instantiate(EnemyPrefab, new Vector3(12, Random.Range(-4,3)), Quaternion.identity);
         }
     }
 

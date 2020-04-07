@@ -6,8 +6,11 @@ public class CrocoPlayerController : MonoBehaviour
 {
     public TextMesh PlayerLivesText;
     public GameObject GameOverText;
+    public GameObject WinText;
+    public GameObject GoBackText;
+    public GameObject RetryText;
     public bool IsGameOver;
-    const float Y_MIN_LIMIT = -4.2f;
+    const float Y_MIN_LIMIT = -2.6f;
     const float Y_MAX_LIMIT = 4.2f;
 
     [SerializeField]
@@ -26,7 +29,14 @@ public class CrocoPlayerController : MonoBehaviour
          _animator = GetComponent<Animator>();
          _scoreController = GameObject.Find("GlobalScriptsText").GetComponent<CrocoScoreController>();
          GameOverText=GameObject.Find("GameOverText");
-         GameOverText.SetActive(false);
+        WinText= GameObject.Find("WinText");
+        GoBackText = GameObject.Find("GoBackText");
+        RetryText = GameObject.Find("RetryText");
+
+        GameOverText.SetActive(false);
+        WinText.SetActive(false);
+        GoBackText.SetActive(false);
+        RetryText.SetActive(false);
     }
     private void Start()
     {
@@ -44,7 +54,7 @@ public class CrocoPlayerController : MonoBehaviour
         if (_lastVerticalAxis != Input.GetAxis("Vertical"))
         {
             _lastVerticalAxis = Input.GetAxis("Vertical");
-            _animator.SetFloat("VerticalAxis", _lastVerticalAxis );
+           // _animator.SetFloat("VerticalAxis", _lastVerticalAxis );
         }
             
         _deltaPos = MovementSpeed * Input.GetAxis("Vertical") * Time.deltaTime;
@@ -83,6 +93,8 @@ public class CrocoPlayerController : MonoBehaviour
                     //Game Over
                     IsGameOver=true;
                     GameOverText.SetActive(true);
+                    RetryText.SetActive(true);
+                    GoBackText.SetActive(true);
                     CrocoAudioManager.Instance.PlaySoundEffect(CrocoAudioManager.SoundEffect.GameOver);
                     _webClient.SaveScore();
 

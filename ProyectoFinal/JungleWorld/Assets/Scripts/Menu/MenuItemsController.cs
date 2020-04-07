@@ -40,7 +40,7 @@ public class MenuItemsController : MonoBehaviour
         switch (gameObject.name)
         {
             case "Play":
-            SceneManager.LoadScene("Taberna");
+            SceneManager.LoadScene("ExplorationLevel");
             break;
 
             case "Options":

@@ -9,7 +9,8 @@ public class BananaWorldGameController : MonoBehaviour
     public int CurrentLives;
     public TextMesh ScoreText;
     public GameObject GameOverText;
-    
+    public GameObject GoBackText;
+    public GameObject RetryText;
     public GameObject WinText;
     public TextMesh LivesText;
     public GameObject BananaPrefab;
@@ -24,12 +25,17 @@ public class BananaWorldGameController : MonoBehaviour
         LivesText = GameObject.Find("LivesText").GetComponent<TextMesh>();
         GameOverText = GameObject.Find("GameOverText");
         WinText = GameObject.Find("WinText");
-        
+        RetryText = GameObject.Find("RetryText");
+        GoBackText = GameObject.Find("GoBackText");
+
+
         InvokeRepeating("InstantiateBanana", 0, 1.5f);
         GameOverText.SetActive(false);
         WinText.SetActive(false);
-       
-        
+        RetryText.SetActive(false);
+        GoBackText.SetActive(false);
+
+
     }
 
     // Update is called once per frame
@@ -38,12 +44,16 @@ public class BananaWorldGameController : MonoBehaviour
        if (CurrentLives <= 0)
         {
             GameOverText.SetActive(true);
+            RetryText.SetActive(true);
+            GoBackText.SetActive(true);
             BananaWorldAudioManager.Instance.PlaySoundEffect(BananaWorldAudioManager.SoundEffect.GameOver);
             return;
         }  
         else if (CurrentScore==5)
         {
             WinText.SetActive(true);
+            RetryText.SetActive(true);
+            GoBackText.SetActive(true);
             BananaWorldAudioManager.Instance.PlaySoundEffect(BananaWorldAudioManager.SoundEffect.Win);
             return;
         }    

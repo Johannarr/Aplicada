@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MapLevels.unity
+    guid: 378c91633768d7448a15c88fc1542c5f
+  - enabled: 1
+    path: Assets/Scenes/BananaWorld.unity
+    guid: 7e32c8e4e5e20f14192df2f13c0b3362
+  - enabled: 1
+    path: Assets/Scenes/CrocodileWorld.unity
+    guid: 2a2bb68e151f4ae4c87b0b5cbdaf9c4f
+  - enabled: 1
+    path: Assets/Scenes/ExplorationLevel.unity
+    guid: 44ec6d44a839b8f4993ed1844326e8be
+  - enabled: 1
+    path: Assets/Scenes/HunterWorld.unity
+    guid: 54071384c9395054c8e7ebd43d8feafb
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 584d451b5948d7a46ae113ca6b400d5b
   m_configObjects: {}

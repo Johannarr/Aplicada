@@ -11,6 +11,8 @@ public class GameControllerHunter : MonoBehaviour
     public TextMesh LivesText;
     public GameObject WinText;
     public GameObject GameOverText;
+    public GameObject GoBackText;
+    public GameObject RetryText;
     public GameObject DuckPrefab;
 
     const float MINY = -4.2f, MAXY = 4.2f;
@@ -19,13 +21,17 @@ public class GameControllerHunter : MonoBehaviour
     {
         
         CurrentScore = 0;
-        CurrentLives = 5;
+        CurrentLives = 3;
         GameOverText = GameObject.Find("GameOverText");
         WinText = GameObject.Find("WinText");
-        
+        RetryText = GameObject.Find("RetryText");
+        GoBackText = GameObject.Find("GoBackText");
+
         InvokeRepeating("InstantiateDuck", 0, 0.5f);
         GameOverText.SetActive(false);
         WinText.SetActive(false);
+        RetryText.SetActive(false);
+        GoBackText.SetActive(false);
 
         HunterWorldAudioManager.Instance.PlaySoundEffect(HunterWorldAudioManager.SoundEffect.Start);
         
@@ -39,7 +45,7 @@ public class GameControllerHunter : MonoBehaviour
             return;
         }
 
-        if (CurrentScore > 2)
+        if (CurrentScore > 5)
         {
             return;
         }
@@ -56,10 +62,12 @@ public class GameControllerHunter : MonoBehaviour
        CurrentScore = CurrentScore + 1;
        ScoreText.text = CurrentScore.ToString();
 
-        if (CurrentScore == 2)
+        if (CurrentScore == 5)
         {
             StartCoroutine("SendScore");
             WinText.SetActive(true);
+            RetryText.SetActive(true);
+            GoBackText.SetActive(true);
            
             
             HunterWorldAudioManager.Instance.PlaySoundEffect(HunterWorldAudioManager.SoundEffect.Win);
@@ -78,7 +86,10 @@ public class GameControllerHunter : MonoBehaviour
         {
             StartCoroutine("SendScore");
             GameOverText.SetActive(true);
-            
+            RetryText.SetActive(true);
+            GoBackText.SetActive(true);
+
+
             HunterWorldAudioManager.Instance.PlaySoundEffect(HunterWorldAudioManager.SoundEffect.GameOver);
         }
 

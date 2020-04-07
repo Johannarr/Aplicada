@@ -14,6 +14,9 @@ TagManager:
   - Cannon
   - NPC
   - EnemyBck
+  - Item
+  - Coin
+  - Powerup
   layers:
   - Default
   - TransparentFX

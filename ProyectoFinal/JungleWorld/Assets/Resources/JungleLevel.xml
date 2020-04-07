@@ -1,35 +1,70 @@
 <level>
 	<map> 
-		<row><![CDATA[FAAAAGAFFFAAAFFFAAAAGGGAAAAAJAAAAFFFFFFFFFFAAAAAAAAAAAFFAFAAJAAFFFAAAAAAAAAAAAAAAAAAAAAAAGGAAAAAAAAAAAAAAAFFFFFFAAAAAAAAAAAAAAFAAAAAAEEEAAAAAAAAAAAFFAAAAAFAAAAAAAJAAAAAAAGGGGAAAAFAAAEAAAAFFA]]></row>
-		<row><![CDATA[AAAAAGAFFFABAFFFAAAAAAAAAAAAKAAAAAAFFFAAAAAAAAAAAEEEAAAFFFAAKAAAAFFFAAAAAAFFFFAAAAAAAAAAAFBAAAAAAAAAAAAAAAFFFFFAAAAAAAAABBAAAFAAACAAAEEEFAAAAJAAAAAAFFFFAFFCACCAAAKAAAAAAAAAAAAAAAAAAAAEAAAFFF]]></row>
+		<row><![CDATA[FEEEEEEFFFEEEFFFEEEEEEEEEEEEJEEEEFFFFFFFFFFEEEEEEEEEEEFFEFEEJEEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEEEEEEEEEEEEEEEFEEEEEFEEEEEEEJEEEEEEEEEEEEEEEFEEEEEEEEFFE]]></row>
+		<row><![CDATA[EAAAAGAFFFAEEFFFAAAAAAAAAAAAKAAEEAAFFFAAAAAAAAAAAEEEAAAFFFAAKAAAAFFFAAAAAAFFFFAAAAAAAAAAAFBAAAAAAAAAAAAAAAFFFFFAAAAAAAAABBAAAFAAACAAAEEEFAAAAJAAAAAAFFFFEFFCACCAAAKAAAAAAAAAEEEAAAAAAAAEAAAFFF]]></row>
 		<row><![CDATA[FFAAAAAABBAAAAAAAAAABFBBAAAAKAAAAAAAAFABAAAAAAAAAAEEAAAAAAAAKABBBBBBBBAAAAFFFFAAABAAAAAAAAAAAAAAAABFBBAAAAAAAAAAAABBAAAAABBAAAFAACAAAEEEAAAAAKAAAAAAAAAFFFAAAAAAAAKAAAAAFAAAAAABBBBBAAEAAABBAA]]></row>
 		<row><![CDATA[FFAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAEEAAAAAAAAKAAAAAAAAAAAAAAAAAAABBAAAFAAAAABABAAAABBEEAAAAAAFAAAAAAAAAAAABBBAAAACAAAAEEEAAAAAKAAAAAAAAAAAAAAAAAAABKAAABBBBBBBAAAAAABAAAABAAAAA]]></row>
-		<row><![CDATA[BBAAAAABBAAAAAFAAAAAAAAAAAAAKAAAAAAAAAAABBAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAAAAFAAAAABAAAAAAFEEEAAAAAAAAAAAAAAAAAAABFFAAAAAAAAAEEEABAAAKAAAAAAAAAAAAAAAAABBAKAAAAAAAAAAAFAAAAABAAAAAAAAA]]></row>
-		<row><![CDATA[AAAAABABAAAAAAAAABBAAAAAAAAAKAAAAAAAAAAAJBBBFBBBAAAAAAAAAAAAKAAAAAAAAAAAAAAAAABBAAAAAAAAAAABAAAAAAAEBAAAAAAAAAFABAAAAAAAABBAAAAAAAAAAEEEABAAAKCAAAAAAAAAAAAAAAAAAAKAAAAAACAAAAAAAAAABAAAAAAAAA]]></row>
-		<row><![CDATA[AAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAKAAAAAAABAABBAAAAAAAKAAAAAAAAAAAABAAABBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAAAABAAAAAAAAAAEEEABAAAKCAAAAAAAAAAAAAAAAAAAKAAAABAABAACCCCAAABAAAAAAAAA]]></row>
-		<row><![CDATA[AAAAFAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAKAAAAABBBBBBBBAAAAAAAAAAAAAAAAAAABAAAAAAAAAAABBBAAAAAAAAFBAAAAAAAAAAAAAAAEEEAAAAALAAAAAAAAAAAAAAAAAAAAKAAAABBBBAAAAAAAAABAAAAAAAAA]]></row>
-		<row><![CDATA[AAAAFAAAGGGAAAAAAAABBBAAAABBBAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAFAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEEAAAAAAAAAAAAFFFCCCCFAAAAAAKAAAAAAACCCCCCABBBBAAAAAAAAA]]></row>
-		<row><![CDATA[AAAAAAAAAAAAAAAAABBBABAABBBABBAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAFFAAAAACFAFFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAACAAAAAAAEEEAABCCAAAAAAAAAAAAACCAAAACCKAAEAAAAAAAFAFABBBBAAAEAAAAA]]></row>
-		<row><![CDATA[AFFAAAAAAAAFFFFFFBBBAAAAFAAAAAAAAAAAAAAAKAAAAAAAAAAEAAAAAFFAKAAAAAABBBBBBBAAAAAAAAACCBAAAAABAAABBBBBBAAAAAAAFAAAAAAAAAAAABAAFCAAAAAAAEEEFABBBAAAAAAAABBBBBAAAAAAAAKAEEEAAAAAAAAAAAAABAAAAEEEAA]]></row>
-		<row><![CDATA[FFFAAAFFAAAAAAFFAAAAAAFFAFFAFAAAAAFAAAAALAAAAAAFAAEEAAFFFFAALABBBBBFAAAFFFFAAAAAAAGGGGFBFAABAAAAAAAAAAFBBBBBBBBBBBFAAAAAAAAFGGGGAAAAFEEEABBBBBFFFFFFAAAAAAAFBBCAAALAAAAAAAAAAAAGGAAAAAAAEAEAEA]]></row>
+		<row><![CDATA[EAAAABABAAAAAAAAABBAAAAAAAAAKAAAAAAAAAAAJBBBFBBBGAAAAAAAAAAAKAAAAGAAAAAAAAAAAABBAAAAAAAAAAABAAAAAAAEBAAAAAAAAAFABAAAAAAAABBAAAAAAAAAGEEEABAAAKCAAAAAAAAGGAAAAAAAAAKAAAAAACAAAAAAAAGABAAAAAAGGA]]></row>
+		<row><![CDATA[EAAAAAAAAAAAAAAAAAAGAAAAAAAAKAAAAAAAAAAAKAAAAAAABAABBAAAAAAAKAAAAGGAAAAAABAAABBAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAABBAAAABAAAGGAAAAGEEEABAAAKCAAAAAAAAAAAAAAAAAAAKAAAABAABAACCCCAGABAAAAAAAGG]]></row>
+		<row><![CDATA[EBAAAAABBAAAAAFAAAAAAAAAAAAAKAAAAAAAAAAABBAAAAAAGAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAAAAFAAAAABAAAAAAFEEEAAAAAAAAAAAAAAAAAAABFFAAAAAAAAGEEEABAAAKAAAAAAAAAAAAAAAAABBAKAAAAAAAAAAAFAAAAABAAAAAAGAA]]></row>
+		<row><![CDATA[EAAAFAAAAAAAAAAAAAAAAAAAAAAALAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAKAAAAABBBBBBBBAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAGGGGAAAAAAAFBAAAAAAAAAGAAAAAEEEAAAAALAAAAAAAAAAAAAAAAAAAAKAAAABBBBAAAAAAAAABAAAAAAAAA]]></row>
+		<row><![CDATA[EAAAFAAAGGGAAAAAAAABBBAAAABBBAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAFAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEEAAAAAAAAAAAAFFFCCCCFAAAAAAKAAAAAAACCCCCCABBBBAAAAAAAAA]]></row>
+		<row><![CDATA[EAAAAAAAAAAAAAAAABBBABAABBBABBAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAFFAAAAACFAFFAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAABBAACAAAAAAAEEEAABCCAAAAAAAAAAAAACCAAAACCKAAEAAAAAAAFAFABBBBAAAEAAAAA]]></row>
+		<row><![CDATA[EFFAAAAAAAAFFFFFFBBBEEGAFAGAAAAAAAAAAAAAKAAAGGGAAAAEAAAAAFFAKAGGAAABBBBBBBAAAAAAAAACCBAAAAABAAABBBBBBAFAAAAAFAAAAAAFAAAAABAAFCFAAFAAAEEEFABBBAAAAAAAABBBBBAAAAAAAAKAEEEAAAAAEEEEAAAABAAAAEEEAA]]></row>
+		<row><![CDATA[FFFEEEFFEEEEEEFFEEEEEEFFEFFEFEEEEEFEEEEELEEEEEEFEEEEEEFFFFEELEEEEEEFEEEFFFFEEEEEEEEEEEFEFEFFFFFFFFEEEEEEEEEEEEEEBEFEEEEEEEEEEEEEEEEEFEEEEEEEEEFFFFFFEEEEEEEFEEEEEELEEEEEEEEEEEEEEEEEEEEEEEEEEE]]></row>
 	</map>
 	<characters>
 		<character id="0" uniqueObjectName="Player" prefabName="Player" posX="7.89" posY="2.62" tag="Player"/>
-		<character id="1" uniqueObjectName="Enemy1" prefabName="Enemy1" posX="30.42" posY="-0.27" tag="EnemyBck"/>
-		<character id="2" uniqueObjectName="Enemy2" prefabName="Enemy1" posX="42.27" posY="9.34" tag="EnemyBck"/>
-		<character id="3" uniqueObjectName="Enemy3" prefabName="Enemy1" posX="62.61" posY="9.63" tag="EnemyBck"/>
-		<character id="4" uniqueObjectName="Enemy4" prefabName="Enemy1" posX="143.46" posY="0.43" tag="EnemyBck"/>
-		<character id="5" uniqueObjectName="Enemy5" prefabName="Enemy1" posX="164.68" posY="-0.2" tag="EnemyBck"/>
-		<character id="6" uniqueObjectName="Enemy6" prefabName="Enemy2" posX="19.64" posY="8.48" tag="Enemy"/>
-		<character id="7" uniqueObjectName="Enemy7" prefabName="Enemy2" posX="45.92" posY="0.94" tag="Enemy"/>
+		<character id="1" uniqueObjectName="Enemy1" prefabName="Enemy1" posX="20.19" posY="-9.3" tag="EnemyBck"/>
+		<character id="2" uniqueObjectName="Enemy2" prefabName="Enemy1" posX="17.51" posY="9.38" tag="EnemyBck"/>
+		<character id="3" uniqueObjectName="Enemy3" prefabName="Enemy1" posX="40.14" posY="9.21" tag="EnemyBck"/>
+		<character id="4" uniqueObjectName="Enemy4" prefabName="Enemy1" posX="142.31" posY="1.21" tag="EnemyBck"/>
+		<character id="5" uniqueObjectName="Enemy5" prefabName="Enemy1" posX="118.61" posY="0.796" tag="EnemyBck"/>
+		<character id="6" uniqueObjectName="Enemy6" prefabName="Enemy2" posX="-3.07" posY="8.35" tag="Enemy"/>
+		<character id="7" uniqueObjectName="Enemy7" prefabName="Enemy2" posX="24.091" posY="1.2277" tag="Enemy"/>
 		<character id="8" uniqueObjectName="Enemy8" prefabName="Enemy2" posX="81.51" posY="0.94" tag="Enemy"/>
 		<character id="9" uniqueObjectName="Enemy9" prefabName="Enemy2" posX="118.99" posY="8.82" tag="Enemy"/>
-	
-	
+		<character id="10" uniqueObjectName="Coin0" prefabName="CoinPrefab" posX="8.22" posY="5.77" tag="Coin"/>
+		<character id="11" uniqueObjectName="Coin1" prefabName="CoinPrefab" posX="9.95" posY="5.83" tag="Coin"/>
+		<character id="12" uniqueObjectName="Coin2" prefabName="CoinPrefab" posX="11.61" posY="5.83" tag="Coin"/>
+		<character id="13" uniqueObjectName="Coin3" prefabName="CoinPrefab" posX="18.62" posY="3.44" tag="Coin"/>
+		<character id="14" uniqueObjectName="Coin4" prefabName="CoinPrefab" posX="20.17" posY="3.38" tag="Coin"/>
+		<character id="15" uniqueObjectName="Coin5" prefabName="CoinPrefab" posX="21.68" posY="3.33" tag="Coin"/>
+		<character id="16" uniqueObjectName="Coin6" prefabName="CoinPrefab" posX="23.4" posY="3.33" tag="Coin"/>
+		<character id="17" uniqueObjectName="Coin7" prefabName="CoinPrefab" posX="25.35" posY="3.39" tag="Coin"/>
+		<character id="18" uniqueObjectName="Coin8" prefabName="CoinPrefab" posX="31.79" posY="3.55" tag="Coin"/>
+		<character id="19" uniqueObjectName="Coin9" prefabName="CoinPrefab" posX="33.41" posY="3.55" tag="Coin"/>
+		<character id="20" uniqueObjectName="Coin10" prefabName="CoinPrefab" posX="31.85" posY="4.94" tag="Coin"/>
+		<character id="21" uniqueObjectName="Coin11" prefabName="CoinPrefab" posX="33.41" posY="4.89" tag="Coin"/>
+		<character id="22" uniqueObjectName="Coin12" prefabName="CoinPrefab" posX="53.09" posY="3.77" tag="Coin"/>
+		<character id="23" uniqueObjectName="Coin13" prefabName="CoinPrefab" posX="53.03" posY="5.22" tag="Coin"/>
+		<character id="24" uniqueObjectName="Coin14" prefabName="CoinPrefab" posX="55.03" posY="3.72" tag="Coin"/>
+		<character id="25" uniqueObjectName="Coin15" prefabName="CoinPrefab" posX="54.97" posY="5.28" tag="Coin"/>
+		<character id="26" uniqueObjectName="Coin16" prefabName="CoinPrefab" posX="57.03" posY="3.78" tag="Coin"/>
+		<character id="27" uniqueObjectName="Coin17" prefabName="CoinPrefab" posX="57.03" posY="5.22" tag="Coin"/>
+		<character id="28" uniqueObjectName="Coin18" prefabName="CoinPrefab" posX="63.53" posY="2.72" tag="Coin"/>
+		<character id="29" uniqueObjectName="Coin19" prefabName="CoinPrefab" posX="65.28" posY="2.72" tag="Coin"/>
+		<character id="30" uniqueObjectName="Coin20" prefabName="CoinPrefab" posX="66.97" posY="2.78" tag="Coin"/>
+		<character id="31" uniqueObjectName="Coin21" prefabName="CoinPrefab" posX="57.03" posY="5.22" tag="Coin"/>
+		<character id="32" uniqueObjectName="Coin22" prefabName="CoinPrefab" posX="88.86" posY="3.41" tag="Coin"/>
+		<character id="33" uniqueObjectName="Coin23" prefabName="CoinPrefab" posX="88.92" posY="5.09" tag="Coin"/>
+		<character id="34" uniqueObjectName="Coin24" prefabName="CoinPrefab" posX="92.92" posY="4.09" tag="Coin"/>
+		<character id="35" uniqueObjectName="Coin25" prefabName="CoinPrefab" posX="94.48" posY="4.15" tag="Coin"/>
+		<character id="36" uniqueObjectName="Coin26" prefabName="CoinPrefab" posX="117.12" posY="1.84" tag="Coin"/>
+		<character id="37" uniqueObjectName="Coin27" prefabName="CoinPrefab" posX="118.87" posY="1.9" tag="Coin"/>
+		<character id="38" uniqueObjectName="Coin28" prefabName="CoinPrefab" posX="118.87" posY="3.4" tag="Coin"/>
+		<character id="39" uniqueObjectName="Coin29" prefabName="CoinPrefab" posX="126.25" posY="7.4" tag="Coin"/>
+		<character id="40" uniqueObjectName="Coin30" prefabName="CoinPrefab" posX="129.5" posY="7.22" tag="Coin"/>
+		<character id="41" uniqueObjectName="Coin31" prefabName="CoinPrefab" posX="131.25" posY="7.22" tag="Coin"/>
+		<character id="42" uniqueObjectName="Coin32" prefabName="CoinPrefab" posX="139.51" posY="3.28" tag="Coin"/>
+		<character id="43" uniqueObjectName="Coin33" prefabName="CoinPrefab" posX="139.45" posY="4.84" tag="Coin"/>
+		<character id="44" uniqueObjectName="Coin34" prefabName="CoinPrefab" posX="145.64" posY="3.53" tag="Coin"/>
+		<character id="45" uniqueObjectName="Coin35" prefabName="CoinPrefab" posX="145.64" posY="5.03" tag="Coin"/>
+		<character id="46" uniqueObjectName="Coin36" prefabName="CoinPrefab" posX="147.45" posY="3.53" tag="Coin"/>
+		<character id="47" uniqueObjectName="Coin37" prefabName="CoinPrefab" posX="147.45" posY="4.97" tag="Coin"/>
+		<character id="48" uniqueObjectName="Powerup1" prefabName="PowerupPrefab" posX="47.52" posY="1.57" tag="Coin"/>
 	</characters>
 	<items>
-		<item id="0" uniqueObjectName="Chest1" prefabName="ChestBanana" posX="1" posY="36" tag="EssenceItem"/>
-		<item id="1" uniqueObjectName="Chest2" prefabName="ChestCherry" posX="30" posY="39" tag="EssenceItem"/>
-		<item id="2" uniqueObjectName="Chest3" prefabName="ChestGrape" posX="57" posY="39" tag="EssenceItem"/>
+		
 	</items>
 </level>
