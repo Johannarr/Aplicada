@@ -11,13 +11,8 @@ public class TraslateMisions : MonoBehaviour
     {
         if (Input.GetButtonDown("Submit") && other.gameObject.tag.ToString().Contains("Player"))
         {
-                switch (gameObject.name)
-                {
-                    case "Door":
-                    _sceneName = "MapLevels";
-                    break;
-
-                }
+             _sceneName = "MapLevels";
+                  
         }
 
      SceneManager.LoadScene(_sceneName);

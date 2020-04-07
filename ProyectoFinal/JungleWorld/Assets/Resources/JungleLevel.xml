@@ -15,12 +15,12 @@
 	</map>
 	<characters>
 		<character id="0" uniqueObjectName="Player" prefabName="Player" posX="7.89" posY="2.62" tag="Player"/>
-		<character id="1" uniqueObjectName="Enemy1" prefabName="Enemy1" posX="20.19" posY="-9.3" tag="EnemyBck"/>
-		<character id="2" uniqueObjectName="Enemy2" prefabName="Enemy1" posX="17.51" posY="9.38" tag="EnemyBck"/>
-		<character id="3" uniqueObjectName="Enemy3" prefabName="Enemy1" posX="40.14" posY="9.21" tag="EnemyBck"/>
-		<character id="4" uniqueObjectName="Enemy4" prefabName="Enemy1" posX="142.31" posY="1.21" tag="EnemyBck"/>
-		<character id="5" uniqueObjectName="Enemy5" prefabName="Enemy1" posX="118.61" posY="0.796" tag="EnemyBck"/>
-		<character id="6" uniqueObjectName="Enemy6" prefabName="Enemy2" posX="-3.07" posY="8.35" tag="Enemy"/>
+		<character id="1" uniqueObjectName="Enemy1" prefabName="Enemy1" posX="8.4" posY="0.796" tag="EnemyBck"/>
+		<character id="2" uniqueObjectName="Enemy2" prefabName="Enemy1" posX="3.26" posY="8.958" tag="EnemyBck"/>
+		<character id="3" uniqueObjectName="Enemy3" prefabName="Enemy1" posX="17" posY="8.9" tag="EnemyBck"/>
+		<character id="4" uniqueObjectName="Enemy4" prefabName="Enemy1" posX="121.4" posY="1.21" tag="EnemyBck"/>
+		<character id="5" uniqueObjectName="Enemy5" prefabName="Enemy1" posX="40.2" posY="1.133" tag="EnemyBck"/>
+		<character id="6" uniqueObjectName="Enemy6" prefabName="Enemy2" posX="32.4" posY="2.7" tag="Enemy"/>
 		<character id="7" uniqueObjectName="Enemy7" prefabName="Enemy2" posX="24.091" posY="1.2277" tag="Enemy"/>
 		<character id="8" uniqueObjectName="Enemy8" prefabName="Enemy2" posX="81.51" posY="0.94" tag="Enemy"/>
 		<character id="9" uniqueObjectName="Enemy9" prefabName="Enemy2" posX="118.99" posY="8.82" tag="Enemy"/>
@@ -62,7 +62,9 @@
 		<character id="45" uniqueObjectName="Coin35" prefabName="CoinPrefab" posX="145.64" posY="5.03" tag="Coin"/>
 		<character id="46" uniqueObjectName="Coin36" prefabName="CoinPrefab" posX="147.45" posY="3.53" tag="Coin"/>
 		<character id="47" uniqueObjectName="Coin37" prefabName="CoinPrefab" posX="147.45" posY="4.97" tag="Coin"/>
-		<character id="48" uniqueObjectName="Powerup1" prefabName="PowerupPrefab" posX="47.52" posY="1.57" tag="Coin"/>
+		<character id="48" uniqueObjectName="Powerup1" prefabName="PowerupPrefab" posX="43.9" posY="1" tag="Powerup"/>
+		<character id="49" uniqueObjectName="Powerup2" prefabName="Check1Prefab" posX="131.7" posY="5.4" tag="Item"/>
+		<character id="49" uniqueObjectName="Powerup3" prefabName="CheckPrefab" posX="187.6" posY="5.4" tag="Item"/>
 	</characters>
 	<items>
 		

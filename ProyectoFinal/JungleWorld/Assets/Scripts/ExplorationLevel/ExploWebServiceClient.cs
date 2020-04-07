@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class FlappyWebServiceClient : MonoBehaviour
+public class ExploWebServiceClient : MonoBehaviour
 {
     // Start is called before the first frame update
     [Serializable]
@@ -15,7 +15,7 @@ public class FlappyWebServiceClient : MonoBehaviour
         public double Score;
     }
     UnityWebRequest www;
-    const string webServiceURL = "https://localhost:44345/api/flappy";
+    const string webServiceURL = "https://localhost:44345/api/exploration";
     void Start()
     {
 

@@ -12,7 +12,7 @@ public class MapManager : MonoBehaviour
     public GameObject Grass1, Grass2, Grass3, Rock, Obstacle1, Obstacle2, Obstacle3, Tree1, Tree2;
     XmlDocument xmlDoc;
 
-    public GameObject PlayerPrefab, Enemy1Prefab, Enemy2Prefab, CoinPrefab, PowerupPrefab;
+    public GameObject PlayerPrefab, Enemy1Prefab, Enemy2Prefab, CoinPrefab, PowerupPrefab, CheckPrefab, Check1Prefab;
     GameObject currentPrefab = null;
     Transform cellsConstainer, charactersContainer;
     XmlNode currentNode;
@@ -114,6 +114,12 @@ public class MapManager : MonoBehaviour
                     break;
                 case "PowerupPrefab":
                     currentPrefab = PowerupPrefab;
+                    break;
+                case "Check1Prefab":
+                    currentPrefab = Check1Prefab;
+                    break;
+                case "CheckPrefab":
+                    currentPrefab = CheckPrefab;
                     break;
                     /*default:
                         currentPrefab = EnemyPrefab;

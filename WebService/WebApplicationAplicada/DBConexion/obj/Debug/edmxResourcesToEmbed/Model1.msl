@@ -51,5 +51,45 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="BananaScores">
+      <EntityTypeMapping TypeName="AplicadaDBModel.BananaScore">
+        <MappingFragment StoreEntitySet="BananaScore">
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="PlayerName" ColumnName="PlayerName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CrocodileScores">
+      <EntityTypeMapping TypeName="AplicadaDBModel.CrocodileScore">
+        <MappingFragment StoreEntitySet="CrocodileScore">
+          <ScalarProperty Name="FrogScore" ColumnName="FrogScore" />
+          <ScalarProperty Name="OrangeScore" ColumnName="OrangeScore" />
+          <ScalarProperty Name="RedScore" ColumnName="RedScore" />
+          <ScalarProperty Name="GreenScore" ColumnName="GreenScore" />
+          <ScalarProperty Name="BlueScore" ColumnName="BlueScore" />
+          <ScalarProperty Name="PlayerName" ColumnName="PlayerName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExplorationScores">
+      <EntityTypeMapping TypeName="AplicadaDBModel.ExplorationScore">
+        <MappingFragment StoreEntitySet="ExplorationScore">
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="PlayerName" ColumnName="PlayerName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HunterScores">
+      <EntityTypeMapping TypeName="AplicadaDBModel.HunterScore">
+        <MappingFragment StoreEntitySet="HunterScore">
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="PlayerName" ColumnName="PlayerName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

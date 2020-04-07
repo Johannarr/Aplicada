@@ -47,6 +47,10 @@ public class MenuItemsController : MonoBehaviour
             _menuController.ShowGameOptions();
             break;
 
+            case "Creditos":
+            SceneManager.LoadScene("Creditos");
+            break;
+            
             case "Exit":
             //quita la scena
             Application.Quit();

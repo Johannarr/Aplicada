@@ -1,19 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControllerExploLevel : MonoBehaviour
 {
-    Vector3 _movementSpeed = new Vector3(3, 3),
-    _runningSpeed= new Vector3(15, 15);
+    Vector3 _movementSpeed = new Vector3(5, 5),
+    _runningSpeed= new Vector3(12, 12);
     Rigidbody _rigidbody;
     Animator _animator;
     SpriteRenderer _renderer;
     Vector3 _newPosition= new Vector3();
     bool _isEnemy, _canJump;
     GameControllerExplo gameController;
+    
+    
 
-    const float ENEMYMOVEDISTANCE = 5f, ENEMYATTACKDISTANCE=2f, ENEMYRUNNINGSPEED=10f;
+    const float ENEMYMOVEDISTANCE = 4f, ENEMYATTACKDISTANCE=2f, ENEMYRUNNINGSPEED=6f;
     GameObject _player;
     // Start is called before the first frame update
    
@@ -31,7 +34,7 @@ public class PlayerControllerExploLevel : MonoBehaviour
         
         _rigidbody = GetComponent<Rigidbody>();
         _isEnemy = gameObject.tag == "Enemy";
-        gameController = GameObject.Find("GlobalScriptsText").GetComponent<GameControllerExplo>();
+        gameController = GameObject.Find("GlobalScriptsText").GetComponent<GameControllerExplo>();     
 
 
     }
@@ -68,8 +71,12 @@ public class PlayerControllerExploLevel : MonoBehaviour
            _player.transform.position)<ENEMYATTACKDISTANCE)
            {
                _animator.SetBool("Attack", true);
-
-           }
+               gameController.GameOver(); 
+               
+               SceneManager.LoadScene("Menu");              
+                                             
+                
+            }
            else
            {
                _animator.SetBool("Attack", false);
@@ -116,24 +123,6 @@ public class PlayerControllerExploLevel : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-
-        if (other.tag == "Coin")
-        {
-            gameController.IncrementScore();
-            ExploAudioManager.Instance.PlaySoundEffect(ExploAudioManager.SoundEffect.CaptureCoin);
-            Destroy(other.gameObject);
-        }
-
-        if (other.tag == "Powerup")
-        {
-            _canJump = true;
-            ExploAudioManager.Instance.PlaySoundEffect(ExploAudioManager.SoundEffect.CapturePowerUp);
-            Destroy(other.gameObject);
-        }
-
-    }
-
+   
     
 }

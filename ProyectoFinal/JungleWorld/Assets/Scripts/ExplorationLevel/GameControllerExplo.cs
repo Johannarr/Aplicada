@@ -41,7 +41,7 @@ public class GameControllerExplo : MonoBehaviour
     public int IncrementScore()
     { 
 
-       CurrentScore = CurrentScore + 1;
+       CurrentScore = CurrentScore + 100;
        ScoreText.text = CurrentScore.ToString();
 
       /*  if (CurrentScore == 2)
@@ -64,12 +64,8 @@ public class GameControllerExplo : MonoBehaviour
 
         if (CurrentLives == 0)
         {
-            StartCoroutine("SendScore");
-            GameOverText.SetActive(true);
-            RetryText.SetActive(true);
-            GoBackText.SetActive(true);
-
-            ExploAudioManager.Instance.PlaySoundEffect(ExploAudioManager.SoundEffect.GameOver);
+            GameOver();
+           
         }
 
         return CurrentLives;
@@ -84,13 +80,25 @@ public class GameControllerExplo : MonoBehaviour
         StartCoroutine("SendScore");
         ExploAudioManager.Instance.PlaySoundEffect(ExploAudioManager.SoundEffect.GameOver);
         
-        return;
+        
 
     }
 
-    
-   IEnumerator SendScore()
+    public void Win()
     {
-        yield return gameObject.GetComponent<HunterWorldWebServiceClient>().SendWebRequest(CurrentScore);
+        WinText.SetActive(true);
+        RetryText.SetActive(true);
+        GoBackText.SetActive(true);
+        StartCoroutine("SendScore");
+        ExploAudioManager.Instance.PlaySoundEffect(ExploAudioManager.SoundEffect.Win);
+        
+
+    }
+
+
+    IEnumerator SendScore()
+    {
+        yield return gameObject.GetComponent<ExploWebServiceClient>().SendWebRequest(CurrentScore);
+        
     }
 }

@@ -34,10 +34,12 @@ public class GameLoaderController : MonoBehaviour
                 break;
                                 
              }
-            
+
+            SceneManager.LoadScene(_sceneName);
+
         }
 
-    SceneManager.LoadScene(_sceneName);
+    
     }
     // Start is called before the first frame update
 }
