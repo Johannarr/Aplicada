@@ -14,6 +14,7 @@ public class GameControllerHunter : MonoBehaviour
     public GameObject GoBackText;
     public GameObject RetryText;
     public GameObject DuckPrefab;
+    bool isGameOver;
 
     const float MINY = -4.2f, MAXY = 4.2f;
     // Start is called before the first frame update
@@ -40,7 +41,7 @@ public class GameControllerHunter : MonoBehaviour
     // Update is called once per frame
     void InstantiateDuck()
     {
-        if (CurrentLives <= 0)
+        if (CurrentLives == 0)
         {
             return;
         }
@@ -62,7 +63,7 @@ public class GameControllerHunter : MonoBehaviour
        CurrentScore = CurrentScore + 1;
        ScoreText.text = CurrentScore.ToString();
 
-        if (CurrentScore == 5)
+        if (CurrentScore == 5 && isGameOver==false)
         {
             StartCoroutine("SendScore");
             WinText.SetActive(true);
@@ -84,13 +85,8 @@ public class GameControllerHunter : MonoBehaviour
 
         if (CurrentLives == 0)
         {
-            StartCoroutine("SendScore");
-            GameOverText.SetActive(true);
-            RetryText.SetActive(true);
-            GoBackText.SetActive(true);
-
-
-            HunterWorldAudioManager.Instance.PlaySoundEffect(HunterWorldAudioManager.SoundEffect.GameOver);
+            GameOver();
+                    
         }
 
         return CurrentLives;
@@ -99,8 +95,12 @@ public class GameControllerHunter : MonoBehaviour
 
     public void GameOver()
     {
+        isGameOver = true;
         GameOverText.SetActive(true);
         StartCoroutine("SendScore");
+        RetryText.SetActive(true);
+        GoBackText.SetActive(true);
+        HunterWorldAudioManager.Instance.PlaySoundEffect(HunterWorldAudioManager.SoundEffect.GameOver);
         return;
 
     }

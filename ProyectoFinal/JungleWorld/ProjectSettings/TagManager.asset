@@ -17,6 +17,12 @@ TagManager:
   - Item
   - Coin
   - Powerup
+  - Fruit
+  - EnemyBck1
+  - EnemyBck2
+  - EnemyBck3
+  - EnemyBck4
+  - EnemyBck5
   layers:
   - Default
   - TransparentFX

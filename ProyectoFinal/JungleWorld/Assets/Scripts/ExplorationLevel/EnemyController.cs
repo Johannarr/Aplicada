@@ -4,60 +4,72 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    MapManager gameController;
 
-    Vector3 enemyMovement;
+    
+    private Vector3 pos1;
+    private Vector3 pos2;
+    public float speed = 0.00001f;
 
-    bool movingRight = true;
-
-    float Speed = 5;
-
-    public Transform groundDetection;
-
-    RaycastHit2D groundInformation;
-
-    float distance = 2;
-
+    GameControllerExplo gameController;
     void Start()
     {
-
-        gameController = GameObject.Find("GlobalScriptsText").GetComponent<MapManager>();
+        gameController = GameObject.Find("GlobalScriptsText").GetComponent<GameControllerExplo>();
     }
 
     void Update()
     {
-        gameObject.transform.Translate(Vector2.right * Speed * Time.deltaTime);
-
-        groundInformation = Physics2D.Raycast(groundDetection.position,Vector2.down,distance);
-        
-        if (groundInformation.collider == false)
+       if (gameObject.tag == ("EnemyBck1"))
         {
-            if (movingRight == true)
-            {
-                transform.eulerAngles = new Vector3(0,-180,0);
-                movingRight = false;
+            pos1 = new Vector3(8.190001f, -0.73f, 0);
+            pos2 = new Vector3(8.190001f, -6.21f, 0);
 
-            }else
-            {
-                transform.eulerAngles = new Vector3(0,0,0);
-                movingRight = true;
-            }
+        }
+
+        if (gameObject.tag == ("EnemyBck2"))
+        {
+            pos1 = new Vector3(20.46f, -9.06f, 0);
+            pos2 = new Vector3(20.46f, -3.76f, 0);
+
+        }
+
+        if (gameObject.tag == ("EnemyBck3"))
+        {
+            pos1 = new Vector3(40.48f, -9.13f, 0);
+            pos2 = new Vector3(40.48f, -0.69f, 0);
+
+        }
+
+        if (gameObject.tag == ("EnemyBck4"))
+        {
+            pos1 = new Vector3(74.1f, -8.5f, 0);
+            pos2 = new Vector3(74.1f, -1.3f, 0);
+
+        }
+
+        if (gameObject.tag == ("EnemyBck5"))
+        {
+            pos1 = new Vector3(142.4f, -1.1f, 0);
+            pos2 = new Vector3(142.2f, -8.2f, 0);
+
+        }
+
+        transform.position = Vector3.Lerp(pos1, pos2, Mathf.PingPong(Time.time, 1.2f));
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.tag.ToString().Contains("Player"))
+        {
+
+            gameController.DecrementLives();
+
+            ExploAudioManager.Instance.PlaySoundEffect(ExploAudioManager.SoundEffect.CapturePowerUp);
         }
     }
 
 
-    /*private void OnTriggerEnter2D(Collider2D other){
+}    
 
 
-       if (other.gameObject.tag.ToString().Contains("Player"))
-       {
-           
-
-            gameController.DecrementLives();
-
-            AudioManager.Instance.PlaySoundEffect(AudioManager.SoundEffect.DamageTaken);   
-       }
-
-        
-    }*/
-}

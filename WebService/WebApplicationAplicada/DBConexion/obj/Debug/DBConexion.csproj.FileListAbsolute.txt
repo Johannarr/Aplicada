@@ -9,3 +9,4 @@ C:\Aplicada\WebService\WebApplicationAplicada\DBConexion\obj\Debug\DBConexion.cs
 C:\Aplicada\WebService\WebApplicationAplicada\DBConexion\obj\Debug\DBConexion.csproj.CopyComplete
 C:\Aplicada\WebService\WebApplicationAplicada\DBConexion\obj\Debug\DBConexion.dll
 C:\Aplicada\WebService\WebApplicationAplicada\DBConexion\obj\Debug\DBConexion.pdb
+C:\Aplicada\WebService\WebApplicationAplicada\DBConexion\obj\Debug\DBConexion.csproj.CoreCompileInputs.cache

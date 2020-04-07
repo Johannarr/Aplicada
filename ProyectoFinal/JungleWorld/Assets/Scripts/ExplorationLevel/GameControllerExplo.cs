@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameControllerExplo : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class GameControllerExplo : MonoBehaviour
     {
         
         CurrentScore = 0;
-        CurrentLives = 5;
+        CurrentLives = 3;
         GameOverText = GameObject.Find("GameOverText");
         WinText = GameObject.Find("WinText");
         RetryText =GameObject.Find("RetryText");
@@ -71,6 +72,15 @@ public class GameControllerExplo : MonoBehaviour
         return CurrentLives;
     }
 
+    public int IncrementLives()
+    {
+        CurrentLives = CurrentLives + 1;
+        LivesText.text = CurrentLives.ToString();
+
+
+        return CurrentLives;
+    }
+
 
     public void GameOver()
     {
@@ -79,8 +89,8 @@ public class GameControllerExplo : MonoBehaviour
         GoBackText.SetActive(true);
         StartCoroutine("SendScore");
         ExploAudioManager.Instance.PlaySoundEffect(ExploAudioManager.SoundEffect.GameOver);
-        
-        
+        SceneManager.LoadScene("Menu");
+
 
     }
 

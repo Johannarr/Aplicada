@@ -26,8 +26,27 @@ public class ScoreGain : MonoBehaviour
         {
             gameController.IncrementScore();
             ExploAudioManager.Instance.PlaySoundEffect(ExploAudioManager.SoundEffect.CaptureCoin);
-           Destroy(gameObject);
+            Destroy(gameObject);
+
         }
+         
+        if (other.tag == "Powerup")
+        {
+                gameController.IncrementLives();
+                ExploAudioManager.Instance.PlaySoundEffect(ExploAudioManager.SoundEffect.CaptureCoin);
+                Destroy(gameObject);
+        }
+
+
+        if (other.tag == "Fruit")
+        {
+            gameController.IncrementScore();
+            ExploAudioManager.Instance.PlaySoundEffect(ExploAudioManager.SoundEffect.CaptureFruit);
+            Destroy(gameObject);
+        }
+
+
+
 
     }
 }

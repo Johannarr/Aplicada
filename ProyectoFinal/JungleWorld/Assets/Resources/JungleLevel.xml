@@ -14,12 +14,12 @@
 		<row><![CDATA[FFFEEEFFEEEEEEFFEEEEEEFFEFFEFEEEEEFEEEEELEEEEEEFEEEEEEFFFFEELEEEEEEFEEEFFFFEEEEEEEEEEEFEFEFFFFFFFFEEEEEEEEEEEEEEBEFEEEEEEEEEEEEEEEEEFEEEEEEEEEFFFFFFEEEEEEEFEEEEEELEEEEEEEEEEEEEEEEEEEEEEEEEEE]]></row>
 	</map>
 	<characters>
-		<character id="0" uniqueObjectName="Player" prefabName="Player" posX="7.89" posY="2.62" tag="Player"/>
-		<character id="1" uniqueObjectName="Enemy1" prefabName="Enemy1" posX="8.4" posY="0.796" tag="EnemyBck"/>
-		<character id="2" uniqueObjectName="Enemy2" prefabName="Enemy1" posX="3.26" posY="8.958" tag="EnemyBck"/>
-		<character id="3" uniqueObjectName="Enemy3" prefabName="Enemy1" posX="17" posY="8.9" tag="EnemyBck"/>
-		<character id="4" uniqueObjectName="Enemy4" prefabName="Enemy1" posX="121.4" posY="1.21" tag="EnemyBck"/>
-		<character id="5" uniqueObjectName="Enemy5" prefabName="Enemy1" posX="40.2" posY="1.133" tag="EnemyBck"/>
+		<character id="0" uniqueObjectName="Player" prefabName="Player" posX="7.0" posY="2.62" tag="Player"/>
+		<character id="1" uniqueObjectName="Enemy1" prefabName="Enemy1" posX="8.190001" posY="0.73" tag="EnemyBck1"/>
+		<character id="2" uniqueObjectName="Enemy2" prefabName="Enemy12" posX="20.46" posY="9.06" tag="EnemyBck2"/>
+		<character id="3" uniqueObjectName="Enemy3" prefabName="Enemy13" posX="40.48" posY="9.13" tag="EnemyBck3"/>
+		<character id="4" uniqueObjectName="Enemy4" prefabName="Enemy14" posX="74.1" posY="8.5" tag="EnemyBck4"/>
+		<character id="5" uniqueObjectName="Enemy5" prefabName="Enemy15" posX="142.4" posY="1.1" tag="EnemyBck5"/>
 		<character id="6" uniqueObjectName="Enemy6" prefabName="Enemy2" posX="32.4" posY="2.7" tag="Enemy"/>
 		<character id="7" uniqueObjectName="Enemy7" prefabName="Enemy2" posX="24.091" posY="1.2277" tag="Enemy"/>
 		<character id="8" uniqueObjectName="Enemy8" prefabName="Enemy2" posX="81.51" posY="0.94" tag="Enemy"/>
@@ -64,7 +64,26 @@
 		<character id="47" uniqueObjectName="Coin37" prefabName="CoinPrefab" posX="147.45" posY="4.97" tag="Coin"/>
 		<character id="48" uniqueObjectName="Powerup1" prefabName="PowerupPrefab" posX="43.9" posY="1" tag="Powerup"/>
 		<character id="49" uniqueObjectName="Powerup2" prefabName="Check1Prefab" posX="131.7" posY="5.4" tag="Item"/>
-		<character id="49" uniqueObjectName="Powerup3" prefabName="CheckPrefab" posX="187.6" posY="5.4" tag="Item"/>
+		<character id="50" uniqueObjectName="Powerup3" prefabName="CheckPrefab" posX="187.6" posY="5.4" tag="Item"/>
+		<character id="51" uniqueObjectName="Fruit1" prefabName="BananaPrefab" posX="17.52" posY="5.97" tag="Fruit"/>
+		<character id="52" uniqueObjectName="Fruit2" prefabName="BananaPrefab" posX="20.12" posY="5.97" tag="Fruit"/>
+		<character id="53" uniqueObjectName="Fruit3" prefabName="BananaPrefab" posX="31.75" posY="8.19" tag="Fruit"/>
+		<character id="54" uniqueObjectName="Fruit4" prefabName="BananaPrefab" posX="37.93" posY="8.11" tag="Fruit"/>
+		<character id="55" uniqueObjectName="Fruit5" prefabName="BananaPrefab" posX="48.4" posY="7.42" tag="Fruit"/>
+		<character id="56" uniqueObjectName="Fruit6" prefabName="BananaPrefab" posX="51.77" posY="7.42" tag="Fruit"/>
+		<character id="57" uniqueObjectName="Fruit7" prefabName="BananaPrefab" posX="78.53" posY="3.75" tag="Fruit"/>
+		<character id="58" uniqueObjectName="Fruit8" prefabName="BananaPrefab" posX="80.21" posY="5.58" tag="Fruit"/>
+		<character id="59" uniqueObjectName="Fruit9" prefabName="BananaPrefab" posX="82.66" posY="6.35" tag="Fruit"/>
+		<character id="60" uniqueObjectName="Fruit10" prefabName="BananaPrefab" posX="77.92" posY="6.35" tag="Fruit"/>
+		<character id="61" uniqueObjectName="Fruit11" prefabName="BananaPrefab" posX="105.83" posY="7.42" tag="Fruit"/>
+		<character id="62" uniqueObjectName="Fruit12" prefabName="BananaPrefab" posX="108.65" posY="7.34" tag="Fruit"/>
+		<character id="63" uniqueObjectName="Fruit13" prefabName="BananaPrefab" posX="111.18" posY="7.27" tag="Fruit"/>
+		<character id="64" uniqueObjectName="Fruit14" prefabName="BananaPrefab" posX="126.7" posY="2.99" tag="Fruit"/>
+		<character id="65" uniqueObjectName="Fruit15" prefabName="BananaPrefab" posX="129.07" posY="2.99" tag="Fruit"/>
+		<character id="66" uniqueObjectName="Fruit16" prefabName="BananaPrefab" posX="131.52" posY="1.69" tag="Fruit"/>
+		<character id="67" uniqueObjectName="Fruit17" prefabName="BananaPrefab" posX="128.76" posY="1.54" tag="Fruit"/>
+		<character id="58" uniqueObjectName="Enemy10" prefabName="Enemy1" posX="40.31" posY="1.01" tag="EnemyBck"/>
+		
 	</characters>
 	<items>
 		

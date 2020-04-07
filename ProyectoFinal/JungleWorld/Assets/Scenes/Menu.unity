@@ -567,7 +567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed0a9883f48377047909b5ff6c7a123b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerNameInputField: {fileID: 0}
+  PlayerNameInputField: {fileID: 193461844}
   MusicVolumeSlider: {fileID: 60608112}
   EffectsVolumeSlider: {fileID: 1877678745}
   DifficultyDropdown: {fileID: 2123927151}
